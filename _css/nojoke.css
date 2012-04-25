@@ -71,7 +71,11 @@ header {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
+  xoverflow: hidden; }
+  #content:after {
+    content: '';
+    display: block;
+    clear: both; }
 
 section {
   padding: 1.3em 0 2.5em;
@@ -96,11 +100,18 @@ section {
     margin-top: 0;
     font-size: 1.1em;
     color: #544861;
+    position: relative;
     xborder-bottom: 1px solid #e6edeb;
     xborder-top: 1px solid #e6edeb;
     xbackground: rgba(0, 0, 0, 0.02);
-    xtext-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white;
+    text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white;
     position: relative; }
+    section h1:before {
+      content: '\00D7\0020';
+      xcolor: #ccc;
+      position: absolute;
+      right: 100%;
+      margin-right: 2px; }
   section h2 {
     font-size: 1em;
     font-weight: normal; }
@@ -181,6 +192,9 @@ section {
       color: #389e98; }
   #projects #project-list img {
     opacity: 0.3; }
+    #projects #project-list img:hover {
+      opacity: 1;
+      -webkit-transition: opacity 0.2s linear; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Twitter Feed Styles

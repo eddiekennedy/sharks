@@ -115,7 +115,12 @@ header{
 */
 #content{
 	@include wrap;
-	overflow:hidden;
+	xoverflow:hidden;
+	&:after{
+		content:'';
+		display:block;
+		clear:both;
+	}
 }
 section{
 	padding:1.3em 0 2.5em;
@@ -141,11 +146,19 @@ section{
 		margin-top:0;
 		font-size:1.1em;
 		color:$purple;
+		position:relative;
 		xborder-bottom:1px solid #e6edeb;
 		xborder-top:1px solid #e6edeb;
 		xbackground:rgba(0,0,0,.02);
-		xtext-shadow:-1px 1px 0 #ddd, -2px 2px 0 #fff, -3px 3px 0 #fff;
+		text-shadow:-1px 1px 0 #ddd, -2px 2px 0 #fff, -3px 3px 0 #fff;
 		position:relative;
+		&:before{
+			content:'\00D7\0020';
+			xcolor:#ccc;
+			position:absolute;
+			right:100%;
+			margin-right:2px;
+		}
 	}
 	h2{
 		font-size:1em;
@@ -240,6 +253,10 @@ section{
 	
 		img{
 			opacity:0.3;
+			&:hover{
+				opacity:1;
+				-webkit-transition:opacity 0.2s linear;
+			}
 		}
 	}
 	
