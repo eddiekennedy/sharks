@@ -13,7 +13,7 @@ body {
   font-family: "Droid Serif", georgia;
   font-size: 100%;
   color: #333;
-  background: url(../images/wht.jpg);
+  background: url(../_images/wht.jpg);
   border-top: 1px solid #544861; }
 
 ul {
@@ -105,13 +105,15 @@ section {
     xborder-top: 1px solid #e6edeb;
     xbackground: rgba(0, 0, 0, 0.02);
     text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white;
+    font-weight: normal;
     position: relative; }
     section h1:before {
-      content: '\00D7\0020';
+      content: '\00D7\00A0';
       xcolor: #ccc;
       position: absolute;
       right: 100%;
-      margin-right: 2px; }
+      xmargin-right: 4px;
+      text-shadow: none; }
   section h2 {
     font-size: 1em;
     font-weight: normal; }
@@ -151,13 +153,13 @@ section {
           opacity: 0.8;
           -webkit-transition: opacity 0.1s linear; }
       #get-in-touch #links li a#github {
-        background: url(../images/icon-github.png) no-repeat; }
+        background: url(../_images/icon-github.png) no-repeat; }
       #get-in-touch #links li a#twitter {
-        background: url(../images/icon-twitter.png) no-repeat; }
+        background: url(../_images/icon-twitter.png) no-repeat; }
       #get-in-touch #links li a#tumblr {
-        background: url(../images/icon-tumblr.png) no-repeat; }
+        background: url(../_images/icon-tumblr.png) no-repeat; }
       #get-in-touch #links li a#linkedin {
-        background: url(../images/icon-linkedin.png) no-repeat; }
+        background: url(../_images/icon-linkedin.png) no-repeat; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Project List Styles
@@ -170,9 +172,12 @@ section {
   clear: both; }
   #projects #project-list li {
     position: relative;
-    margin: 0 0 1em 0; }
+    margin: 0 0 2.5em 0;
+    padding: 0 0 2em 0;
+    border-bottom: 1px dashed #ccc; }
     #projects #project-list li:last-child {
-      margin: 0; }
+      margin: 0;
+      border-bottom: none; }
   #projects #project-list h2 {
     font-weight: bold;
     margin: 0;
@@ -191,10 +196,11 @@ section {
       background: none;
       color: #389e98; }
   #projects #project-list img {
-    opacity: 0.3; }
+    opacity: 0.3;
+    margin-bottom: 1em; }
     #projects #project-list img:hover {
-      opacity: 1;
-      -webkit-transition: opacity 0.2s linear; }
+      xopacity: 1;
+      x-webkit-transition: opacity 0.2s linear; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Twitter Feed Styles
