@@ -1,0 +1,316 @@
+/*
+*   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
+*   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
+*/
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('normalize.css');
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Site-wide Styles
+*/
+*
+body {
+  font-family: "Droid Serif", georgia;
+  font-size: 100%;
+  color: #333;
+  background: url(../images/wht.jpg);
+  border-top: 1px solid #544861; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+a {
+  color: #389e98;
+  text-decoration: none;
+  border-bottom: 1px dashed #389e98; }
+  a:hover {
+    border-bottom: none;
+    background: #389e98;
+    color: #fff;
+    -webkit-transition: background-color 0.5s linear;
+    -webkit-transition: color 0.25s ease-in; }
+  a:active {
+    outline: none;
+    position: relative;
+    top: 1px; }
+
+img {
+  width: 100%;
+  max-width: 100%; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Header Styles
+*/
+header {
+  padding: 1.3em 0;
+  border-top: 3px solid #544861;
+  font-weight: normal;
+  text-shadow: 0 1px 0 #fff;
+  xborder-bottom: 1px solid #e6edeb;
+  xbox-shadow: inset 0 1px 0 0 #fff, 0 1px 0 0 #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 0 #eee, 0 2px 0 #eee, 0 3px 0 #fff; }
+  header hgroup {
+    width: 94%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
+  header h1, header h2 {
+    font-size: 1.05em;
+    line-height: 1.7em;
+    font-weight: normal; }
+    header h1 strong, header h2 strong {
+      color: #544861; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Content Styles
+*/
+#content {
+  width: 94%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+
+section {
+  padding: 1.3em 0 2.5em;
+  margin: 1em 0;
+  xborder-bottom: 1px solid #eaeaea;
+  position: relative;
+  xbackground: red; }
+  section:after {
+    content: '\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
+    width: 100%;
+    display: block;
+    position: absolute;
+    padding-top: 1.5em;
+    right: 0;
+    color: #eee;
+    text-align: right;
+    white-space: pre;
+    overflow: hidden;
+    text-shadow: 0 1px 0 #ddd; }
+  section h1 {
+    padding: 0.5em 0;
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #544861;
+    xborder-bottom: 1px solid #e6edeb;
+    xborder-top: 1px solid #e6edeb;
+    xbackground: rgba(0, 0, 0, 0.02);
+    xtext-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white;
+    position: relative; }
+  section h2 {
+    font-size: 1em;
+    font-weight: normal; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Contact Styles
+*/
+#get-in-touch {
+  float: none;
+  width: 96%;
+  padding-right: 2%;
+  padding-left: 2%;
+  clear: both;
+  font-size: 0.9em; }
+  #get-in-touch p.contact {
+    margin-bottom: 1.5em;
+    /**/ }
+  #get-in-touch #links {
+    padding-top: 1.3em;
+    margin: 0;
+    border-top: 1px dashed #ddd;
+    overflow: hidden;
+    text-align: center; }
+    #get-in-touch #links li {
+      float: left;
+      margin-left: 1em; }
+      #get-in-touch #links li:first-child {
+        margin: 0; }
+      #get-in-touch #links li a {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: none;
+        text-indent: -9999em;
+        opacity: 0.5; }
+        #get-in-touch #links li a:hover {
+          opacity: 0.8;
+          -webkit-transition: opacity 0.1s linear; }
+      #get-in-touch #links li a#github {
+        background: url(../images/icon-github.png) no-repeat; }
+      #get-in-touch #links li a#twitter {
+        background: url(../images/icon-twitter.png) no-repeat; }
+      #get-in-touch #links li a#tumblr {
+        background: url(../images/icon-tumblr.png) no-repeat; }
+      #get-in-touch #links li a#linkedin {
+        background: url(../images/icon-linkedin.png) no-repeat; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Project List Styles
+*/
+#projects {
+  float: none;
+  width: 96%;
+  padding-right: 2%;
+  padding-left: 2%;
+  clear: both; }
+  #projects #project-list li {
+    position: relative;
+    margin: 0 0 1em 0; }
+    #projects #project-list li:last-child {
+      margin: 0; }
+  #projects #project-list h2 {
+    font-weight: bold;
+    margin: 0;
+    xposition: absolute;
+    xbottom: 0;
+    xwidth: 96%;
+    xpadding: .2em 2%;
+    xbackground: #389e98;
+    xfont-family: "Droid Sans", verdana;
+    xcolor: #fff; }
+  #projects #project-list p {
+    margin: 0; }
+  #projects #project-list a {
+    border: none; }
+    #projects #project-list a:hover {
+      background: none;
+      color: #389e98; }
+  #projects #project-list img {
+    opacity: 0.3; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Twitter Feed Styles
+*/
+#twitter-feed {
+  float: none;
+  width: 96%;
+  padding-right: 2%;
+  padding-left: 2%;
+  clear: both; }
+  #twitter-feed ul {
+    font-size: 0.9em; }
+    #twitter-feed ul li {
+      position: relative;
+      xmargin: 0 0 1em 0;
+      xpadding: 0 0 1em 0;
+      border-top: 1px dashed #ccc; }
+      #twitter-feed ul li:last-child {
+        margin: 0;
+        xborder: none; }
+      #twitter-feed ul li p {
+        margin-right: 60px;
+        line-height: 1.6em; }
+      #twitter-feed ul li .tweet-link {
+        width: 30px;
+        position: absolute;
+        top: 1.3em;
+        right: 0;
+        padding: 3px 4px 3px;
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+        xborder-top: none;
+        font-size: 0.8em;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Footer Styles
+*/
+footer {
+  padding: 1em 0 1.3em;
+  margin: 3em 0 0 0;
+  box-shadow: 0 -1px 0 white, 0 -2px 0 #eeeeee, 0 -3px 0 #eeeeee, 0 -4px 0 #dddddd;
+  clear: both;
+  xfont-family: "Droid Sans", verdana;
+  font-size: 0.8em;
+  color: #bbb;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center; }
+  footer p {
+    width: 94%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	We Responsive, Son!
+*/
+@media screen and (min-width: 700px) {
+  header h1, header h2 {
+    font-size: 1.15em;
+    line-height: 1.7em; }
+
+  #get-in-touch {
+    float: right;
+    width: 31.25%;
+    padding-right: 0;
+    padding-left: 0;
+    clear: right; }
+
+  #projects {
+    float: left;
+    width: 64.583%;
+    padding-right: 4.167%;
+    padding-left: 0;
+    clear: left; }
+
+  #twitter-feed {
+    float: right;
+    width: 31.25%;
+    padding-right: 0;
+    padding-left: 0;
+    clear: right; }
+
+  		                /*
+  section{
+  	background:url(../images/tri12.png);
+  }
+  section#get-in-touch{
+  	background:none;
+  }
+  
+  #get-in-touch{
+  	overflow:auto;/* /
+  	p.contact{
+  		float:left;/* /
+  	}
+  	#links{
+  		float:right;/* /
+  		padding:0;/* /
+  		margin-top:0.9em;/* /
+  		border-top:none;/* /
+  		li{
+  			margin:0 0 0 .5em;
+  		}
+  	}
+  }
+  */ }
+@media screen and (min-width: 700px) {
+  /*
+  header{
+  	padding-bottom:0.75em;
+  	border-bottom:none;
+  	h1, h2 { 
+  		font-size:1.156em;
+  		line-height:1.15em;
+  		font-weight:normal;
+  	}
+  }
+  section#get-in-touch{
+  	padding:0.5em 0 0.2em 0;
+  	border-top:none;
+  	box-shadow:none;
+  	p, ul{
+  		margin:0;
+  	}
+  }
+  */ }
