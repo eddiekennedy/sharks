@@ -8,7 +8,6 @@
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Site-wide Styles
 */
-*
 body {
   font-family: "Droid Serif", georgia;
   font-size: 100%;
@@ -78,7 +77,7 @@ header {
     clear: both; }
 
 section {
-  padding: 1.3em 0 2.5em;
+  padding: 2em 0 2.5em;
   margin: 1em 0;
   xborder-bottom: 1px solid #eaeaea;
   position: relative;
@@ -88,7 +87,7 @@ section {
     width: 100%;
     display: block;
     position: absolute;
-    padding-top: 1.5em;
+    padding-top: 2em;
     right: 0;
     color: #eee;
     text-align: right;
@@ -129,19 +128,22 @@ section {
   clear: both;
   font-size: 0.9em; }
   #get-in-touch p.contact {
-    margin-bottom: 1.5em;
-    /**/ }
+    margin-bottom: 2em;
+    margin-top: 0; }
   #get-in-touch #links {
-    padding-top: 1.3em;
+    padding-top: 2em;
     margin: 0;
     border-top: 1px dashed #ddd;
     overflow: hidden;
-    text-align: center; }
+    text-align: center;
+    position: relative; }
     #get-in-touch #links li {
-      float: left;
-      margin-left: 1em; }
+      xfloat: left;
+      display: inline-block;
+      margin-left: .5em;
+      margin-right: .5em; }
       #get-in-touch #links li:first-child {
-        margin: 0; }
+        xmargin: 0; }
       #get-in-touch #links li a {
         display: block;
         width: 24px;
@@ -160,6 +162,16 @@ section {
         background: url(../_images/icon-tumblr.png) no-repeat; }
       #get-in-touch #links li a#linkedin {
         background: url(../_images/icon-linkedin.png) no-repeat; }
+    #get-in-touch #links:before {
+      content: '';
+      height: 5px;
+      xbackground: rgba(255, 255, 255, 0.5);
+      xborder-top: 1px solid #ccc;
+      xborder-bottom: 1px solid #ccc;
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 60%; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Project List Styles
@@ -180,7 +192,7 @@ section {
       border-bottom: none; }
   #projects #project-list h2 {
     font-weight: bold;
-    margin: 0;
+    margin: 0 0 .5em 0;
     xposition: absolute;
     xbottom: 0;
     xwidth: 96%;
@@ -189,9 +201,13 @@ section {
     xfont-family: "Droid Sans", verdana;
     xcolor: #fff; }
   #projects #project-list p {
-    margin: 0; }
+    margin: 0 0 .3em 0;
+    font-size: .8em;
+    line-height: 1.4em; }
   #projects #project-list a {
-    border: none; }
+    border: none;
+    font-size: .8em;
+    line-height: 1.4em; }
     #projects #project-list a:hover {
       background: none;
       color: #389e98; }
@@ -278,8 +294,8 @@ footer {
 
   #projects {
     float: left;
-    width: 64.583%;
-    padding-right: 4.167%;
+    width: 62.5%;
+    padding-right: 6.25%;
     padding-left: 0;
     clear: left; }
 

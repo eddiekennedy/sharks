@@ -24,15 +24,15 @@ $purple: #544861;
 	box-shadow:inset 0 1px 0 0 #fff;
 }
 
-@mixin a{
+@mixin col-a{
 	float:left;
-	width:percentage(620/960);
-	padding-right:percentage(40/960);
+	width:percentage(600/960);
+	padding-right:percentage(60/960);
 	padding-left:0;
 	clear:left;
 }
 
-@mixin b{
+@mixin col-b{
 	float:right;
 	width:percentage(300/960);
 	padding-right:0;
@@ -51,7 +51,6 @@ $purple: #544861;
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Site-wide Styles
 */
-* 	
 body{
 	font-family:$droid-serif;
 	font-size:100%;
@@ -123,7 +122,7 @@ header{
 	}
 }
 section{
-	padding:1.3em 0 2.5em;
+	padding:2em 0 2.5em;
 	margin:1em 0;
 	xborder-bottom:1px solid #eaeaea;
 	position:relative;
@@ -133,7 +132,7 @@ section{
 		width:100%;
 		display:block;
 		position:absolute;
-		padding-top:1.5em;
+		padding-top:2em;
 		right:0;
 		color:#eee;
 		text-align:right;
@@ -174,20 +173,24 @@ section{
 	@include c;
 	font-size:0.9em;
 	p.contact{
-		margin-bottom:1.5em;/**/
+		margin-bottom:2em;
+		margin-top:0;
 	}
 	
 	#links{
-		padding-top:1.3em;
+		padding-top:2em;
 		margin:0;
 		border-top:1px dashed #ddd;
 		overflow:hidden;
 		text-align:center;
+		position:relative;
 		li{
-			float:left;
-			margin-left:1em;
+			xfloat:left;
+			display:inline-block;
+			margin-left:.5em;
+			margin-right:.5em;
 			&:first-child{
-				margin:0;
+				xmargin:0;
 			}
 			a{
 				display:block;
@@ -215,6 +218,17 @@ section{
 			}
 		
 		}
+		&:before{
+			content:'';
+			height:5px;
+			xbackground:rgba(255,255,255,.5);
+			xborder-top:1px solid #ccc;
+			xborder-bottom:1px solid #ccc;
+			display:block;
+			width:100%;
+			position:absolute;
+			top:60%;
+		}
 	}
 	
 }
@@ -236,7 +250,7 @@ section{
 		}
 		h2{
 			font-weight:bold;
-			margin:0;
+			margin:0 0 .5em 0;
 			xposition:absolute;
 			xbottom:0;
 			xwidth:96%;
@@ -246,10 +260,14 @@ section{
 			xcolor:#fff;
 		}
 		p{
-			margin:0;
+			margin:0 0 .3em 0;
+			font-size:.8em;
+			line-height:1.4em;
 		}
 		a{
 			border:none;
+			font-size:.8em;
+			line-height:1.4em;
 			&:hover{
 				background:none;
 				color:$link-color;
@@ -337,13 +355,13 @@ footer{
 		}
 	}
 	#get-in-touch{
-		@include b;
+		@include col-b;
 	}
 	#projects{
-		@include a;
+		@include col-a;
 	}
 	#twitter-feed{
-		@include b;
+		@include col-b;
 	}
 	/*
 	section{
