@@ -283,8 +283,9 @@ section{
 #twitter-feed{
 	@include c;
 	ul{
-		font-size:0.9em;
+		font-size:0.8em;
 		li{
+			font-family:$droid-sans;
 			position:relative;
 			xmargin:0 0 1em 0;
 			xpadding:0 0 1em 0;

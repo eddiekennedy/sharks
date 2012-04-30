@@ -227,8 +227,9 @@ section {
   padding-left: 2%;
   clear: both; }
   #twitter-feed ul {
-    font-size: 0.9em; }
+    font-size: 0.8em; }
     #twitter-feed ul li {
+      font-family: "Droid Sans", verdana;
       position: relative;
       xmargin: 0 0 1em 0;
       xpadding: 0 0 1em 0;
