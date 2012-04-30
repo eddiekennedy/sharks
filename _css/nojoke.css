@@ -6,7 +6,7 @@
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 @import url('normalize.css');
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Site-wide Styles
+*	Element Styles
 */
 body {
   font-family: "Droid Serif", georgia;
@@ -38,6 +38,36 @@ img {
   width: 100%;
   max-width: 100%; }
 
+strong {
+  color: #544861; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	Heading Styles
+*/
+header h1,
+header h2 {
+  font-size: 1.05em;
+  line-height: 1.7em;
+  font-weight: normal; }
+
+section h1 {
+  position: relative;
+  margin-top: 0;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #544861;
+  text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white; }
+  section h1:before {
+    content: '\00D7\00A0';
+    position: absolute;
+    right: 100%;
+    text-shadow: none; }
+
+section h2 {
+  font-size: .9em;
+  xfont-weight: normal;
+  margin: 0 0 .5em 0; }
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Header Styles
 */
@@ -55,12 +85,11 @@ header {
     max-width: 960px;
     margin-left: auto;
     margin-right: auto; }
-  header h1, header h2 {
-    font-size: 1.05em;
-    line-height: 1.7em;
-    font-weight: normal; }
-    header h1 strong, header h2 strong {
-      color: #544861; }
+  header hgroup {
+    width: 94%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Content Styles
@@ -79,7 +108,7 @@ header {
 section {
   padding: 2em 0 2.5em;
   margin: 1em 0;
-  xborder-bottom: 1px solid #eaeaea;
+  border-top: 1px solid #eaeaea;
   position: relative;
   xbackground: red; }
   section:after {
@@ -94,28 +123,6 @@ section {
     white-space: pre;
     overflow: hidden;
     text-shadow: 0 1px 0 #ddd; }
-  section h1 {
-    padding: 0.5em 0;
-    margin-top: 0;
-    font-size: 1.1em;
-    color: #544861;
-    position: relative;
-    xborder-bottom: 1px solid #e6edeb;
-    xborder-top: 1px solid #e6edeb;
-    xbackground: rgba(0, 0, 0, 0.02);
-    text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white;
-    font-weight: normal;
-    position: relative; }
-    section h1:before {
-      content: '\00D7\00A0';
-      xcolor: #ccc;
-      position: absolute;
-      right: 100%;
-      xmargin-right: 4px;
-      text-shadow: none; }
-  section h2 {
-    font-size: 1em;
-    font-weight: normal; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Contact Styles
@@ -182,41 +189,33 @@ section {
   padding-right: 2%;
   padding-left: 2%;
   clear: both; }
-  #projects #project-list li {
-    position: relative;
-    margin: 0 0 2.5em 0;
-    padding: 0 0 2em 0;
-    border-bottom: 1px dashed #ccc; }
-    #projects #project-list li:last-child {
-      margin: 0;
-      border-bottom: none; }
-  #projects #project-list h2 {
-    font-weight: bold;
-    margin: 0 0 .5em 0;
-    xposition: absolute;
-    xbottom: 0;
-    xwidth: 96%;
-    xpadding: .2em 2%;
-    xbackground: #389e98;
-    xfont-family: "Droid Sans", verdana;
-    xcolor: #fff; }
-  #projects #project-list p {
-    margin: 0 0 .3em 0;
-    font-size: .8em;
-    line-height: 1.4em; }
-  #projects #project-list a {
-    border: none;
-    font-size: .8em;
-    line-height: 1.4em; }
-    #projects #project-list a:hover {
-      background: none;
-      color: #389e98; }
-  #projects #project-list img {
-    opacity: 0.3;
-    margin-bottom: 1em; }
-    #projects #project-list img:hover {
-      xopacity: 1;
-      x-webkit-transition: opacity 0.2s linear; }
+  #projects #project-list {
+    font-family: "Droid Sans", verdana; }
+    #projects #project-list li {
+      position: relative;
+      margin: 0 0 2.5em 0;
+      padding: 0 0 2em 0;
+      border-bottom: 1px dashed #ccc; }
+      #projects #project-list li:last-child {
+        margin: 0;
+        border-bottom: none; }
+    #projects #project-list p {
+      margin: 0 0 .3em 0;
+      font-size: .8em;
+      line-height: 1.4em; }
+    #projects #project-list a {
+      border: none;
+      font-size: .8em;
+      line-height: 1.4em; }
+      #projects #project-list a:hover {
+        background: none;
+        color: #389e98; }
+    #projects #project-list img {
+      opacity: 0.3;
+      margin-bottom: 1em; }
+      #projects #project-list img:hover {
+        xopacity: 1;
+        x-webkit-transition: opacity 0.2s linear; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Twitter Feed Styles
@@ -234,6 +233,8 @@ section {
       xmargin: 0 0 1em 0;
       xpadding: 0 0 1em 0;
       border-top: 1px dashed #ccc; }
+      #twitter-feed ul li:first-child {
+        border: none; }
       #twitter-feed ul li:last-child {
         margin: 0;
         xborder: none; }

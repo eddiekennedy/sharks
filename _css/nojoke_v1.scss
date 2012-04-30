@@ -49,7 +49,7 @@ $purple: #544861;
 
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Element Styles
+*	Site-wide Styles
 */
 body{
 	font-family:$droid-serif;
@@ -84,46 +84,11 @@ img{
 	width:100%;
 	max-width:100%;
 }
-strong{
-	color:$purple;
-}
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Heading Styles
-*/
-header h1,
-header h2 {
-	font-size:1.05em;
-	line-height:1.7em;
-	font-weight:normal;
-}
-section h1 {
-	position:relative;
-	margin-top:0;
-	font-size:1.1em;
-	font-weight:normal;
-	color:$purple;
-	text-shadow:-1px 1px 0 #ddd, -2px 2px 0 #fff, -3px 3px 0 #fff;
-	&:before{
-		content:'\00D7\00A0';
-		position:absolute;
-		right:100%;
-		text-shadow:none;
-	}
-}
-section h2 {
-	font-size:.9em;
-	xfont-weight:normal;
-	margin:0 0 .5em 0;
-}
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 *	Header Styles
 */
 header{
-	hgroup{
-		@include wrap;
-	}
 	padding:1.3em 0;
 	border-top:3px solid $purple;
 	font-weight:normal;
@@ -134,6 +99,14 @@ header{
 	box-shadow:0 1px 0 #eee, 0 2px 0 #eee, 0 3px 0 #fff;
 	hgroup{
 		@include wrap;
+	}
+	h1, h2 { 
+		font-size:1.05em;
+		line-height:1.7em;
+		font-weight:normal;
+		strong{
+			color:$purple;
+		}
 	}
 }
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -166,6 +139,31 @@ section{
 		white-space:pre;
 		overflow:hidden;
 		text-shadow:0 1px 0 #ddd;
+	}
+	h1{
+		padding:0 0 0.5em;
+		margin-top:0;
+		font-size:1.1em;
+		color:$purple;
+		position:relative;
+		xborder-bottom:1px solid #e6edeb;
+		xborder-top:1px solid #e6edeb;
+		xbackground:rgba(0,0,0,.02);
+		text-shadow:-1px 1px 0 #ddd, -2px 2px 0 #fff, -3px 3px 0 #fff;
+		font-weight:normal;
+		position:relative;
+		&:before{
+			content:'\00D7\00A0';
+			xcolor:#ccc;
+			position:absolute;
+			right:100%;
+			xmargin-right:4px;
+			text-shadow:none;
+		}
+	}
+	h2{
+		font-size:1em;
+		font-weight:normal;
 	}
 }
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -240,7 +238,6 @@ section{
 #projects{
 	@include c;
 	#project-list{
-		font-family:$droid-sans;
 		li{
 			position:relative;
 			margin:0 0 2.5em 0;
@@ -250,6 +247,17 @@ section{
 				margin:0;
 				border-bottom:none;
 			}
+		}
+		h2{
+			font-weight:bold;
+			margin:0 0 .5em 0;
+			xposition:absolute;
+			xbottom:0;
+			xwidth:96%;
+			xpadding:.2em 2%;
+			xbackground:$link-color;
+			xfont-family:$droid-sans;
+			xcolor:#fff;
 		}
 		p{
 			margin:0 0 .3em 0;
