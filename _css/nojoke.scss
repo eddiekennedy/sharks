@@ -133,13 +133,13 @@ a {
 footer {
 	font-size:.8em;
 	font-family:$droid-sans;
+	color:#aaa;
 	text-align:center;
 }
 .section li {
 	font-family:$droid-sans;
 	font-size:0.8em;
 }
-
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -155,6 +155,9 @@ header {
 hgroup,
 footer p {
 	@include wrap;
+}
+footer p {
+	padding:1em 0;
 }
 .section {
 	@include col;
@@ -184,6 +187,9 @@ footer p {
 	border-bottom:1px dashed #ccc;
 	margin-bottom:2em;
 	padding-bottom:2em;
+	&:last-child {
+		border-bottom:0;
+	}
 }
 /* Relatively Positioned Elements */
 h3 {
