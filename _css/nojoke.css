@@ -1,34 +1,45 @@
 /*
 *   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
+*
+*	Table of Contents:
+*		Elements
+*		Type
+*		Layout
+*		Content
+*
+*	*To-Do
+*		Encode Images
 */
 @import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans');
-@import url('normalize.css');
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Element Styles
+*	$Elements
 */
+body,
+h3, h4,
+p, ul, li, img, a {
+  /* Zero 'em */
+  margin: 0;
+  padding: 0; }
+
 body {
-  font-family: "Droid Serif", georgia;
-  font-size: 100%;
-  color: #333;
-  background: url(../_images/wht.jpg);
+  xbackground: url(../_images/wht.jpg);
+  background: #fcfcfc;
   border-top: 1px solid #544861; }
 
+p {
+  xmargin-bottom: 1.5em; }
+
 ul {
-  padding: 0;
   list-style: none; }
 
 a {
-  color: #389e98;
-  text-decoration: none;
-  border-bottom: 1px dashed #389e98; }
+  xborder-bottom: 1px dashed #389e98; }
   a:hover {
     border-bottom: none;
-    background: #389e98;
-    color: #fff;
-    -webkit-transition: background-color 0.5s linear;
-    -webkit-transition: color 0.25s ease-in; }
+    background: #544861;
+    color: #fff; }
   a:active {
     outline: none;
     position: relative;
@@ -42,320 +53,125 @@ strong {
   color: #544861; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Heading Styles
+*	$Type
 */
-header h1,
-header h2 {
+body {
+  font-size: 100%;
+  font-family: "Droid Serif", georgia;
+  color: #333; }
+
+h1, h2, h3 {
   font-size: 1.05em;
-  line-height: 1.7em;
   font-weight: normal;
-  position: relative; }
+  line-height: 1.7em; }
 
-header h1:before {
-  content: '\00D7\00A0';
-  position: absolute;
-  right: 100%;
-  text-shadow: none; }
+h3, h4 {
+  color: #544861; }
 
-section h1 {
-  position: relative;
-  margin-top: 0;
-  font-size: 1.1em;
-  font-weight: normal;
-  color: #544861;
+h3 {
   text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white; }
-  section h1:before {
+  h3:before {
     content: '\00D7\00A0';
     position: absolute;
     right: 100%;
     text-shadow: none; }
 
-section h2 {
-  font-size: .9em;
-  margin: 0 0 .5em 0; }
+h4 {
+  font-size: 1em; }
+
+#contact h3 {
+  font-size: 1em; }
+
+a {
+  color: #389e98;
+  text-decoration: none; }
+
+footer {
+  font-size: .8em;
+  font-family: "Droid Sans", verdana;
+  text-align: center; }
+
+.section li {
+  font-family: "Droid Sans", verdana;
+  font-size: 0.8em; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Header Styles
+*	$Layout
 */
 header {
-  padding: 1.3em 0;
-  border-top: 3px solid #544861;
-  font-weight: normal;
-  text-shadow: 0 1px 0 #fff;
-  xborder-bottom: 1px solid #e6edeb;
-  xbox-shadow: inset 0 1px 0 0 #fff, 0 1px 0 0 #fff;
-  border-bottom: 1px solid #dcdcdc;
-  box-shadow: 0 1px 0 rgba(240, 240, 240, 0.8), 0 2px 0 rgba(240, 240, 240, 0.8), 0 3px 0 white; }
-  header hgroup {
-    width: 94%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto; }
-  header hgroup {
-    width: 94%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto; }
+  padding: 2em 0;
+  border-bottom: 1px solid #ccc; }
 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Content Styles
-*/
-#content {
+#content,
+hgroup,
+footer p {
   width: 94%;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto; }
-  #content:after {
-    content: '';
-    display: block;
-    clear: both; }
 
-section {
-  font-size: 1em;
-  padding: 30px 0 40px;
+.section {
+  float: none;
+  width: 100%;
+  clear: both;
+  padding: 1em 0 1.4em;
+  margin: 0 0 2em 0;
   position: relative; }
-  section:after {
+  .section:after {
     content: '\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
     width: 100%;
     display: block;
-    position: absolute;
-    padding-top: 2em;
-    right: 0;
-    color: #eee;
-    text-align: right;
-    white-space: pre;
     overflow: hidden;
+    position: absolute;
+    top: 100%;
+    font-size: .6em;
+    color: #eee;
     text-shadow: 0 1px 0 #ddd; }
 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Contact Styles
-*/
-#get-in-touch {
-  float: none;
-  width: 96%;
-  padding-right: 2%;
-  padding-left: 2%;
-  clear: both;
-  font-size: 0.9em; }
-  #get-in-touch p.contact {
-    margin-bottom: 2em;
-    margin-top: 0;
-    position: relative; }
-    #get-in-touch p.contact:before {
-      content: '\00D7\00A0';
-      position: absolute;
-      right: 100%;
-      text-shadow: none; }
-  #get-in-touch #links {
-    padding: 5px 0;
-    margin: 0;
-    text-align: center;
-    position: relative;
-    background: rgba(255, 255, 255, 0.8); }
-    #get-in-touch #links li {
-      display: inline-block;
-      margin-left: .5em;
-      margin-right: .5em; }
-      #get-in-touch #links li a {
-        display: block;
-        width: 24px;
-        height: 24px;
-        border: none;
-        text-indent: -9999em;
-        opacity: 0.5; }
-        #get-in-touch #links li a:hover {
-          opacity: 0.8;
-          -webkit-transition: opacity 0.1s linear; }
-      #get-in-touch #links li a#github {
-        background: url(../_images/icon-github.png) no-repeat; }
-      #get-in-touch #links li a#twitter {
-        background: url(../_images/icon-twitter.png) no-repeat; }
-      #get-in-touch #links li a#tumblr {
-        background: url(../_images/icon-tumblr.png) no-repeat; }
-      #get-in-touch #links li a#linkedin {
-        background: url(../_images/icon-linkedin.png) no-repeat; }
-    #get-in-touch #links:before {
-      content: '\00D7\00A0\00D7\00A0\00D7\00A0';
-      position: absolute;
-      right: 85%;
-      top: 30%;
-      color: #ddd; }
-    #get-in-touch #links:after {
-      content: '\00D7\00A0\00D7\00A0\00D7\00A0';
-      position: absolute;
-      left: 85%;
-      top: 30%;
-      color: #ddd; }
+.inline {
+  display: inline; }
+
+#contact ul {
+  float: right; }
+
+.vertical li {
+  margin: 0;
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 2em;
+  padding-bottom: 2em; }
+
+/* Relatively Positioned Elements */
+h3 {
+  position: relative; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Project List Styles
+*	$Content
 */
-#projects {
-  float: none;
-  width: 96%;
-  padding-right: 2%;
-  padding-left: 2%;
-  clear: both; }
-  #projects #project-list {
-    font-family: "Droid Sans", verdana; }
-    #projects #project-list li {
-      position: relative;
-      margin: 0 0 2.5em 0;
-      padding: 0 0 2em 0;
-      border-bottom: 1px dashed #ccc; }
-      #projects #project-list li:last-child {
-        margin: 0;
-        border-bottom: none; }
-    #projects #project-list p {
-      margin: 0 0 .3em 0;
-      font-size: .8em;
-      line-height: 1.4em; }
-    #projects #project-list a {
-      border: none;
-      font-size: .8em;
-      line-height: 1.4em; }
-      #projects #project-list a:hover {
-        background: none;
-        color: #389e98; }
-    #projects #project-list img {
-      opacity: 0.3;
-      margin-bottom: 1em; }
-      #projects #project-list img:hover {
-        xopacity: 1;
-        x-webkit-transition: opacity 0.2s linear; }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Twitter Feed Styles
-*/
-#twitter-feed {
-  float: none;
-  width: 96%;
-  padding-right: 2%;
-  padding-left: 2%;
-  clear: both; }
-  #twitter-feed ul {
-    font-size: 0.8em; }
-    #twitter-feed ul li {
-      font-family: "Droid Sans", verdana;
-      position: relative;
-      xmargin: 0 0 1em 0;
-      xpadding: 0 0 1em 0;
-      border-top: 1px dashed #ccc; }
-      #twitter-feed ul li:first-child {
-        border: none; }
-      #twitter-feed ul li:last-child {
-        margin: 0;
-        xborder: none; }
-      #twitter-feed ul li p {
-        margin-right: 60px;
-        line-height: 1.6em; }
-      #twitter-feed ul li .tweet-link {
-        width: 30px;
-        position: absolute;
-        top: 1.3em;
-        right: 0;
-        padding: 3px 4px 3px;
-        background: rgba(0, 0, 0, 0.1);
-        border: 1px solid #ccc;
-        xborder-top: none;
-        font-size: 0.8em;
-        color: #fff;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Footer Styles
-*/
-footer {
-  padding: 1em 0 1.3em;
-  margin: 3em 0 0 0;
-  box-shadow: 0 -1px 0 white, 0 -2px 0 #eeeeee, 0 -3px 0 #eeeeee, 0 -4px 0 #dddddd;
-  clear: both;
-  xfont-family: "Droid Sans", verdana;
-  font-size: 0.8em;
-  color: #bbb;
-  text-shadow: 0 1px 0 #fff;
-  text-align: center; }
-  footer p {
-    width: 94%;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0; }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	We Responsive, Son!
-*/
-@media screen and (min-width: 700px) {
-  header h1, header h2 {
-    font-size: 1.15em;
-    line-height: 1.7em; }
-
-  #get-in-touch {
-    float: right;
-    width: 31.25%;
-    padding-right: 0;
-    padding-left: 0;
-    clear: right; }
-
-  #projects {
-    float: left;
-    width: 62.5%;
-    padding-right: 6.25%;
-    padding-left: 0;
-    clear: left; }
-
-  #twitter-feed {
-    float: right;
-    width: 31.25%;
-    padding-right: 0;
-    padding-left: 0;
-    clear: right; }
-
-  		                /*
-  section{
-  	background:url(../images/tri12.png);
-  }
-  section#get-in-touch{
-  	background:none;
-  }
-  
-  #get-in-touch{
-  	overflow:auto;/* /
-  	p.contact{
-  		float:left;/* /
-  	}
-  	#links{
-  		float:right;/* /
-  		padding:0;/* /
-  		margin-top:0.9em;/* /
-  		border-top:none;/* /
-  		li{
-  			margin:0 0 0 .5em;
-  		}
-  	}
-  }
-  */ }
-@media screen and (min-width: 700px) {
-  /*
-  header{
-  	padding-bottom:0.75em;
-  	border-bottom:none;
-  	h1, h2 { 
-  		font-size:1.156em;
-  		line-height:1.15em;
-  		font-weight:normal;
-  	}
-  }
-  section#get-in-touch{
-  	padding:0.5em 0 0.2em 0;
-  	border-top:none;
-  	box-shadow:none;
-  	p, ul{
-  		margin:0;
-  	}
-  }
-  */ }
+/* Icons */
+.icons {
+  text-align: center;
+  position: relative; }
+  .icons li {
+    display: inline-block; }
+  .icons a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    text-indent: -9999em;
+    opacity: 0.5; }
+    .icons a:hover {
+      opacity: 0.8;
+      -webkit-transition: opacity 0.1s linear; }
+  .icons a#github {
+    background: url(../_images/icon-github.png) no-repeat; }
+  .icons a#twitter {
+    background: url(../_images/icon-twitter.png) no-repeat; }
+  .icons a#tumblr {
+    background: url(../_images/icon-tumblr.png) no-repeat; }
+  .icons a#linkedin {
+    background: url(../_images/icon-linkedin.png) no-repeat; }

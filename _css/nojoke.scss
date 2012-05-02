@@ -1,16 +1,24 @@
 /*
 *   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
+*
+*	Table of Contents:
+*		Elements
+*		Type
+*		Layout
+*		Content
+*
+*	*To-Do
+*		Encode Images
 */
 
 @import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans');
-@import url('normalize.css');
 
 $droid-serif: 'Droid Serif', georgia;
 $droid-sans: 'Droid Sans', verdana;
 $link-color: #389E98;
-$purple: #544861;
+$accent-color: #544861;
 
 @mixin wrap {
 	width:94%;
@@ -18,61 +26,65 @@ $purple: #544861;
 	margin-left:auto;
 	margin-right:auto;
 }
-
 @mixin cut {
-	border-top:1px solid #e6edeb;
-	box-shadow:inset 0 1px 0 0 #fff;
+	border-bottom:1px solid rgba(220,220,220,1);
+	box-shadow:0 1px 0 rgba(240,240,240,.8), 0 2px 0 rgba(240,240,240,.8), 0 3px 0 #fff;
 }
-
-@mixin col-a{
+@mixin cross {
+	&:before {
+		content:'\00D7\00A0';
+		position:absolute;
+		right:100%;
+		text-shadow:none;
+	}
+}
+@mixin col-a {
 	float:left;
 	width:percentage(600/960);
 	padding-right:percentage(60/960);
 	padding-left:0;
 	clear:left;
 }
-
-@mixin col-b{
+@mixin col-b {
 	float:right;
 	width:percentage(300/960);
 	padding-right:0;
 	padding-left:0;
 	clear:right;
 }
-@mixin c{
+@mixin col {
 	float:none;
-	width:96%;
-	padding-right:2%;
-	padding-left:2%;
+	width:100%;
 	clear:both;
 }
 
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Element Styles
+*	$Elements
 */
-body{
-	font-family:$droid-serif;
-	font-size:100%;
-	color:#333;
-	background:url(../_images/wht.jpg);
-	border-top:1px solid $purple;
-}
-ul{
+body,
+h3, h4,
+p, ul, li, img, a { /* Zero 'em */
+	margin:0;
 	padding:0;
+}
+body {
+	xbackground:url(../_images/wht.jpg);
+	background:#fcfcfc;
+	border-top:1px solid $accent-color;
+}
+p {
+	xmargin-bottom:1.5em;
+}
+ul {
 	list-style:none;
 }
-a{
-	color:$link-color;
-	text-decoration:none;
-	border-bottom:1px dashed $link-color;
+a {
+	xborder-bottom:1px dashed $link-color;
 	&:hover {
 		border-bottom:none;
-		background:$link-color;
+		background:$accent-color;
 		color:#fff;
-		-webkit-transition:background-color 0.5s linear;
-		-webkit-transition:color 0.25s ease-in;
-		
 	}
 	&:active {
 		outline:none; 
@@ -85,334 +97,133 @@ img{
 	max-width:100%;
 }
 strong{
-	color:$purple;
+	color:$accent-color;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Heading Styles
+*	$Type
 */
-header h1,
-header h2 {
+body {
+	font-size:100%;
+	font-family:$droid-serif;
+	color:#333;
+}
+h1, h2, h3 {
 	font-size:1.05em;
+	font-weight:normal;
 	line-height:1.7em;
-	font-weight:normal;
-	position:relative;
 }
-header h1{
-	&:before{
-		content:'\00D7\00A0';
-		position:absolute;
-		right:100%;
-		text-shadow:none;
-	}
+h3, h4 {
+	color: $accent-color;
 }
-section h1 {
-	position:relative;
-	margin-top:0;
-	font-size:1.1em;
-	font-weight:normal;
-	color:$purple;
-	text-shadow:-1px 1px 0 #ddd, -2px 2px 0 #fff, -3px 3px 0 #fff;
-	&:before{
-		content:'\00D7\00A0';
-		position:absolute;
-		right:100%;
-		text-shadow:none;
-	}
+h3 {
+	text-shadow: -1px 1px 0 #DDD, -2px 2px 0 white, -3px 3px 0 white;
+	@include cross;
 }
-section h2 {
-	font-size:.9em;
-	margin:0 0 .5em 0;
-}
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Header Styles
-*/
-header{
-	hgroup{
-		@include wrap;
-	}
-	padding:1.3em 0;
-	border-top:3px solid $purple;
-	font-weight:normal;
-	text-shadow: 0 1px 0 #fff;
-	xborder-bottom:1px solid #e6edeb;
-	xbox-shadow: inset 0 1px 0 0 #fff, 0 1px 0 0 #fff;
-	border-bottom:1px solid rgba(220,220,220,1);
-	box-shadow:0 1px 0 rgba(240,240,240,.8), 0 2px 0 rgba(240,240,240,.8), 0 3px 0 #fff;
-	hgroup{
-		@include wrap;
-	}
-}
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Content Styles
-*/
-#content{
-	@include wrap;
-	&:after{
-		content:'';
-		display:block;
-		clear:both;
-	}
-}
-section{
+h4 {
 	font-size:1em;
-	padding:30px 0 40px;
+}
+#contact h3 {
+	font-size:1em;
+}
+a {
+	color:$link-color;
+	text-decoration:none;
+}
+footer {
+	font-size:.8em;
+	font-family:$droid-sans;
+	text-align:center;
+}
+.section li {
+	font-family:$droid-sans;
+	font-size:0.8em;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+*	$Layout
+*/
+header {
+	padding:2em 0;
+	border-bottom:1px solid #ccc;
+}
+#content,
+hgroup,
+footer p {
+	@include wrap;
+}
+.section {
+	@include col;
+	padding:1em 0 1.4em;
+	margin:0 0 2em 0;
 	position:relative;
 	&:after{
-	content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
-	width:100%;
-	display:block;
-	position:absolute;
-	padding-top:2em;
-	right:0;
-	color:#eee;
-	text-align:right;
-	white-space:pre;
-	overflow:hidden;
-	text-shadow:0 1px 0 #ddd;
+		content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
+		width:100%;
+		display:block;
+		overflow:hidden;
+		position:absolute;
+		top:100%;
+		font-size:.6em;
+		color:#eee;
+		text-shadow:0 1px 0 #ddd;
 	}
 }
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Contact Styles
-*/
-#get-in-touch{
-	@include c;
-	font-size:0.9em;
-	p.contact{
-		margin-bottom:2em;
-		margin-top:0;
-		position:relative;
-		&:before{
-			content:'\00D7\00A0';
-			position:absolute;
-			right:100%;
-			text-shadow:none;
-		}
-	}
-	
-	#links{
-		padding:5px 0;
-		margin:0;
-		text-align:center;
-		position:relative;
-		background:rgba(255,255,255,.8);
-		li{
-			display:inline-block;
-			margin-left:.5em;
-			margin-right:.5em;
-			a{
-				display:block;
-				width:24px;
-				height:24px;
-				border:none;
-				text-indent:-9999em;
-				opacity:0.5;
-				&:hover{
-					opacity:0.8;
-					-webkit-transition:opacity 0.1s linear;
-				}
-			}
-			a#github{
-				background:url(../_images/icon-github.png) no-repeat;
-			}
-			a#twitter{
-				background:url(../_images/icon-twitter.png) no-repeat;
-			}
-			a#tumblr{
-				background:url(../_images/icon-tumblr.png) no-repeat;
-			}
-			a#linkedin{
-				background:url(../_images/icon-linkedin.png) no-repeat;
-			}
-		}
-		&:before{
-			content:'\00D7\00A0\00D7\00A0\00D7\00A0';
-			position:absolute;
-			right:85%;
-			top:30%;
-			color:#ddd;
-		}
-		&:after{
-			content:'\00D7\00A0\00D7\00A0\00D7\00A0';
-			position:absolute;
-			left:85%;
-			top:30%;
-			color:#ddd;
-		}
-	}
-	
+.inline {
+	display:inline;
 }
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Project List Styles
-*/
-#projects{
-	@include c;
-	#project-list{
-		font-family:$droid-sans;
-		li{
-			position:relative;
-			margin:0 0 2.5em 0;
-			padding:0 0 2em 0;
-			border-bottom:1px dashed #ccc;
-			&:last-child{
-				margin:0;
-				border-bottom:none;
-			}
-		}
-		p{
-			margin:0 0 .3em 0;
-			font-size:.8em;
-			line-height:1.4em;
-		}
-		a{
-			border:none;
-			font-size:.8em;
-			line-height:1.4em;
-			&:hover{
-				background:none;
-				color:$link-color;
-			}
-		}
-	
-		img{
-			opacity:0.3;
-			margin-bottom:1em;
-			&:hover{
-				xopacity:1;
-				x-webkit-transition:opacity 0.2s linear;
-			}
-		}
-	}
-	
+#contact ul {
+	float:right;
 }
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Twitter Feed Styles
-*/
-#twitter-feed{
-	@include c;
-	ul{
-		font-size:0.8em;
-		li{
-			font-family:$droid-sans;
-			position:relative;
-			xmargin:0 0 1em 0;
-			xpadding:0 0 1em 0;
-			border-top:1px dashed #ccc;
-			&:first-child{
-				border:none;
-			}
-			&:last-child{
-				margin:0;
-				xborder:none;
-			}
-			p{
-				margin-right:60px;
-				line-height:1.6em;
-			}
-			.tweet-link{
-				width:30px;
-				position:absolute;
-				top:1.3em;
-				right:0;
-				padding:3px 4px 3px;
-				background:rgba(0,0,0,.1);
-				border:1px solid #ccc;
-				xborder-top:none;
-				font-size:0.8em;
-				color:#fff;
-				text-align:center;
-				font-weight:bold;
-				text-transform:uppercase;
-				text-shadow:0 1px 0 rgba(0,0,0,.3)
-			}
-		}
-	}
+.vertical li {
+	margin:0;
+	border-bottom:1px dashed #ccc;
+	margin-bottom:2em;
+	padding-bottom:2em;
 }
+/* Relatively Positioned Elements */
+h3 {
+	position:relative;
+}
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	Footer Styles
+*	$Content
 */
-footer{
-	padding:1em 0 1.3em;
-	margin:3em 0 0 0;
-	box-shadow:0 -1px 0 #fff, 0 -2px 0 #eee, 0 -3px 0 #eee, 0 -4px 0 #ddd;
-	clear:both;
-	xfont-family:$droid-sans;
-	font-size:0.8em;
-	color:#bbb;
-	text-shadow:0 1px 0 #fff;
+/* Icons */
+.icons {
 	text-align:center;
-	p{
-		@include wrap;
-		margin-top:0;
-		margin-bottom:0;
+	position:relative;
+	li {
+		display:inline-block;
 	}
-	
-} 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	We Responsive, Son!
-*/
-@media screen and (min-width: 700px) {
-	header{
-		h1, h2 { 
-			font-size:1.15em;
-			line-height:1.7em;
+	a {
+		display:block;
+		width:24px;
+		height:24px;
+		border:none;
+		text-indent:-9999em;
+		opacity:0.5;
+		&:hover{
+			opacity:0.8;
+			-webkit-transition:opacity 0.1s linear;
 		}
 	}
-	#get-in-touch{
-		@include col-b;
+	a#github{
+		background:url(../_images/icon-github.png) no-repeat;
 	}
-	#projects{
-		@include col-a;
+	a#twitter{
+		background:url(../_images/icon-twitter.png) no-repeat;
 	}
-	#twitter-feed{
-		@include col-b;
+	a#tumblr{
+		background:url(../_images/icon-tumblr.png) no-repeat;
 	}
-	/*
-	section{
-		background:url(../images/tri12.png);
+	a#linkedin{
+		background:url(../_images/icon-linkedin.png) no-repeat;
 	}
-	section#get-in-touch{
-		background:none;
+	&:before{
 	}
-	
-	#get-in-touch{
-		overflow:auto;/* /
-		p.contact{
-			float:left;/* /
-		}
-		#links{
-			float:right;/* /
-			padding:0;/* /
-			margin-top:0.9em;/* /
-			border-top:none;/* /
-			li{
-				margin:0 0 0 .5em;
-			}
-		}
-	}
-	*/
-}
-
-@media screen and (min-width: 700px) {
-
-	/*
-	header{
-		padding-bottom:0.75em;
-		border-bottom:none;
-		h1, h2 { 
-			font-size:1.156em;
-			line-height:1.15em;
-			font-weight:normal;
-		}
-	}
-	section#get-in-touch{
-		padding:0.5em 0 0.2em 0;
-		border-top:none;
-		box-shadow:none;
-		p, ul{
-			margin:0;
-		}
-	}
-	*/
 }
