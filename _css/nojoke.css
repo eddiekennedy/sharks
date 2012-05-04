@@ -2,19 +2,19 @@
 *   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
 *
-*	Table of Contents:
-*		Elements
-*		Type
-*		Layout
-*		Content
+* Table of Contents:
+*   Elements
+*   Type
+*   Layout
+*   Content
 *
-*	*To-Do
-*		Encode Images
+* *To-Do
+*   Encode Images
 */
 @import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Elements
+* $Elements
 */
 body,
 h3, h4,
@@ -24,9 +24,8 @@ p, ul, li, img, a {
   padding: 0; }
 
 body {
-  xbackground: url(../_images/wht.jpg);
   background: #fcfcfc;
-  border-top: 1px solid #544861; }
+  border-top: 4px solid #544861; }
 
 p {
   xmargin-bottom: 1.5em; }
@@ -53,7 +52,7 @@ strong {
   color: #544861; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Type
+* $Type
 */
 body {
   font-size: 100%;
@@ -101,11 +100,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Layout
+* $Layout
 */
 header {
   padding: 2em 0;
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 1px 0 rgba(240, 240, 240, 0.8), 0 2px 0 rgba(240, 240, 240, 0.8), 0 3px 0 white; }
 
 #content,
 hgroup,
@@ -117,6 +119,9 @@ footer p {
 
 footer p {
   padding: 1em 0; }
+
+#content {
+  padding: 15px 0; }
 
 .section {
   float: none;
@@ -136,12 +141,6 @@ footer p {
     color: #eee;
     text-shadow: 0 1px 0 #ddd; }
 
-.inline {
-  display: inline; }
-
-#contact ul {
-  float: right; }
-
 .vertical li {
   margin: 0;
   border-bottom: 1px dashed #ccc;
@@ -155,12 +154,16 @@ h3 {
   position: relative; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Content
+* $Content
 */
 /* Icons */
 .icons {
+  margin-top: 1em;
   text-align: center;
-  position: relative; }
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  padding-top: 5px;
+  padding-bottom: 5px; }
   .icons li {
     display: inline-block; }
   .icons a {
@@ -181,3 +184,57 @@ h3 {
     background: url(../_images/icon-tumblr.png) no-repeat; }
   .icons a#linkedin {
     background: url(../_images/icon-linkedin.png) no-repeat; }
+  .icons:before {
+    content: '\00D7\00A0\00D7\00A0\00D7\00A0';
+    position: absolute;
+    right: 85%;
+    top: 30%;
+    color: #ddd; }
+  .icons:after {
+    content: '\00D7\00A0\00D7\00A0\00D7\00A0';
+    position: absolute;
+    left: 85%;
+    top: 30%;
+    color: #ddd; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+* We Responsive, Son!
+*/
+@media screen and (min-width: 460px) {
+  body {
+    background: url(../_images/wht.jpg); }
+
+  #contact ul {
+    float: right;
+    margin-top: -5px; }
+
+  #contact p {
+    float: left; } }
+@media screen and (min-width: 700px) {
+  header h1, header h2 {
+    font-size: 1.15em;
+    line-height: 1.7em; }
+
+  .col-b {
+    float: right;
+    width: 31.25%;
+    padding-right: 0;
+    padding-left: 0;
+    clear: right; }
+
+  .col-a {
+    float: left;
+    width: 62.5%;
+    padding-right: 6.25%;
+    padding-left: 0;
+    clear: left; }
+
+  #contact ul {
+    float: none;
+    margin-top: 1em; }
+
+  #contact p {
+    float: none; }
+
+  footer {
+    clear: both; } }

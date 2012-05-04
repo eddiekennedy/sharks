@@ -2,14 +2,14 @@
 *   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
 *
-*	Table of Contents:
-*		Elements
-*		Type
-*		Layout
-*		Content
+* Table of Contents:
+*   Elements
+*   Type
+*   Layout
+*   Content
 *
-*	*To-Do
-*		Encode Images
+* *To-Do
+*   Encode Images
 */
 
 @import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
@@ -21,215 +21,269 @@ $link-color: #389E98;
 $accent-color: #544861;
 
 @mixin wrap {
-	width:94%;
-	max-width:960px;
-	margin-left:auto;
-	margin-right:auto;
+  width:94%;
+  max-width:960px;
+  margin-left:auto;
+  margin-right:auto;
 }
 @mixin cut {
-	border-bottom:1px solid rgba(220,220,220,1);
-	box-shadow:0 1px 0 rgba(240,240,240,.8), 0 2px 0 rgba(240,240,240,.8), 0 3px 0 #fff;
+  border-bottom:1px solid rgba(220,220,220,1);
+  box-shadow:0 1px 0 rgba(240,240,240,.8), 0 2px 0 rgba(240,240,240,.8), 0 3px 0 #fff;
 }
 @mixin cross {
-	&:before {
-		content:'\00D7\00A0';
-		position:absolute;
-		right:100%;
-		text-shadow:none;
-	}
+  &:before {
+    content:'\00D7\00A0';
+    position:absolute;
+    right:100%;
+    text-shadow:none;
+  }
 }
 @mixin col-a {
-	float:left;
-	width:percentage(600/960);
-	padding-right:percentage(60/960);
-	padding-left:0;
-	clear:left;
+  float:left;
+  width:percentage(600/960);
+  padding-right:percentage(60/960);
+  padding-left:0;
+  clear:left;
 }
 @mixin col-b {
-	float:right;
-	width:percentage(300/960);
-	padding-right:0;
-	padding-left:0;
-	clear:right;
+  float:right;
+  width:percentage(300/960);
+  padding-right:0;
+  padding-left:0;
+  clear:right;
 }
 @mixin col {
-	float:none;
-	width:100%;
-	clear:both;
+  float:none;
+  width:100%;
+  clear:both;
 }
 
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Elements
+* $Elements
 */
 body,
 h3, h4,
 p, ul, li, img, a { /* Zero 'em */
-	margin:0;
-	padding:0;
+  margin:0;
+  padding:0;
 }
 body {
-	xbackground:url(../_images/wht.jpg);
-	background:#fcfcfc;
-	border-top:1px solid $accent-color;
+  background: #fcfcfc;
+  border-top: 4px solid $accent-color;
 }
 p {
-	xmargin-bottom:1.5em;
+  xmargin-bottom:1.5em;
 }
 ul {
-	list-style:none;
+  list-style:none;
 }
 a {
-	xborder-bottom:1px dashed $link-color;
-	&:hover {
-		border-bottom:none;
-		background:$accent-color;
-		color:#fff;
-	}
-	&:active {
-		outline:none; 
-		position:relative; 
-		top:1px;
-	}
+  xborder-bottom:1px dashed $link-color;
+  &:hover {
+    border-bottom:none;
+    background:$accent-color;
+    color:#fff;
+  }
+  &:active {
+    outline:none; 
+    position:relative; 
+    top:1px;
+  }
 }
 img{
-	width:100%;
-	max-width:100%;
+  width:100%;
+  max-width:100%;
 }
 strong{
-	color:$accent-color;
+  color:$accent-color;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Type
+* $Type
 */
 body {
-	font-size:100%;
-	font-family:$droid-serif;
-	color:#333;
+  font-size:100%;
+  font-family:$droid-serif;
+  color:#333;
 }
 h1, h2, h3 {
-	font-size:1.05em;
-	font-weight:normal;
-	line-height:1.7em;
+  font-size:1.05em;
+  font-weight:normal;
+  line-height:1.7em;
 }
 h3, h4 {
-	color: $accent-color;
+  color: $accent-color;
 }
 h3 {
-	text-shadow: -1px 1px 0 #DDD, -2px 2px 0 white, -3px 3px 0 white;
-	@include cross;
+  text-shadow: -1px 1px 0 #DDD, -2px 2px 0 white, -3px 3px 0 white;
+  @include cross;
 }
 h4 {
-	font-size:1em;
+  font-size:1em;
 }
 #contact h3 {
-	font-size:1em;
+  font-size:1em;
 }
 a {
-	color:$link-color;
-	text-decoration:none;
+  color:$link-color;
+  text-decoration:none;
 }
 footer {
-	font-size:.8em;
-	font-family:$droid-sans;
-	color:#aaa;
-	text-align:center;
+  font-size:.8em;
+  font-family:$droid-sans;
+  color:#aaa;
+  text-align:center;
 }
 .section li {
-	font-family:$droid-sans;
-	font-size:0.8em;
+  font-family:$droid-sans;
+  font-size:0.8em;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Layout
+* $Layout
 */
 header {
-	padding:2em 0;
-	border-bottom:1px solid #ccc;
+  padding:2em 0;
+  border-bottom:1px solid #ccc;
+  background: rgba(255, 255, 255, 0.4);
+  @include cut;
 }
 #content,
 hgroup,
 footer p {
-	@include wrap;
+  @include wrap;
 }
 footer p {
-	padding:1em 0;
+  padding:1em 0;
+}
+#content {
+  padding: 15px 0;
 }
 .section {
-	@include col;
-	padding:1em 0 1.4em;
-	margin:0 0 2em 0;
-	position:relative;
-	&:after{
-		content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
-		width:100%;
-		display:block;
-		overflow:hidden;
-		position:absolute;
-		top:100%;
-		font-size:.6em;
-		color:#eee;
-		text-shadow:0 1px 0 #ddd;
-	}
-}
-.inline {
-	display:inline;
-}
-#contact ul {
-	float:right;
+  @include col;
+  padding:1em 0 1.4em;
+  margin:0 0 2em 0;
+  position:relative;
+  &:after{
+    content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
+    width:100%;
+    display:block;
+    overflow:hidden;
+    position:absolute;
+    top:100%;
+    font-size:.6em;
+    color:#eee;
+    text-shadow:0 1px 0 #ddd;
+  }
 }
 .vertical li {
-	margin:0;
-	border-bottom:1px dashed #ccc;
-	margin-bottom:2em;
-	padding-bottom:2em;
-	&:last-child {
-		border-bottom:0;
-	}
+  margin:0;
+  border-bottom:1px dashed #ccc;
+  margin-bottom:2em;
+  padding-bottom:2em;
+  &:last-child {
+    border-bottom:0;
+  }
 }
 /* Relatively Positioned Elements */
 h3 {
-	position:relative;
+  position:relative;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-*	$Content
+* $Content
 */
 /* Icons */
 .icons {
-	text-align:center;
-	position:relative;
-	li {
-		display:inline-block;
-	}
-	a {
-		display:block;
-		width:24px;
-		height:24px;
-		border:none;
-		text-indent:-9999em;
-		opacity:0.5;
-		&:hover{
-			opacity:0.8;
-			-webkit-transition:opacity 0.1s linear;
-		}
-	}
-	a#github{
-		background:url(../_images/icon-github.png) no-repeat;
-	}
-	a#twitter{
-		background:url(../_images/icon-twitter.png) no-repeat;
-	}
-	a#tumblr{
-		background:url(../_images/icon-tumblr.png) no-repeat;
-	}
-	a#linkedin{
-		background:url(../_images/icon-linkedin.png) no-repeat;
-	}
-	&:before{
-	}
+  margin-top: 1em;
+  text-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, .8);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  li {
+    display:inline-block;
+  }
+  a {
+    display:block;
+    width:24px;
+    height:24px;
+    border:none;
+    text-indent:-9999em;
+    opacity:0.5;
+    &:hover{
+      opacity:0.8;
+      -webkit-transition:opacity 0.1s linear;
+    }
+  }
+  a#github{
+    background:url(../_images/icon-github.png) no-repeat;
+  }
+  a#twitter{
+    background:url(../_images/icon-twitter.png) no-repeat;
+  }
+  a#tumblr{
+    background:url(../_images/icon-tumblr.png) no-repeat;
+  }
+  a#linkedin{
+    background:url(../_images/icon-linkedin.png) no-repeat;
+  }
+  &:before{
+    content:'\00D7\00A0\00D7\00A0\00D7\00A0';
+    position:absolute;
+    right:85%;
+    top:30%;
+    color:#ddd;
+  }
+  &:after{
+    content:'\00D7\00A0\00D7\00A0\00D7\00A0';
+    position:absolute;
+    left:85%;
+    top:30%;
+    color:#ddd;
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+* We Responsive, Son!
+*/
+@media screen and (min-width: 460px) {
+  body {
+    background:url(../_images/wht.jpg);
+  }
+  #contact ul {
+    float: right;
+    margin-top: -5px;
+  }
+  #contact p {
+    float: left;
+  }
+}
+@media screen and (min-width: 700px) {
+  header{
+    h1, h2 { 
+      font-size:1.15em;
+      line-height:1.7em;
+    }
+  }
+  .col-b{
+    @include col-b;
+  }
+  .col-a{
+    @include col-a;
+  }
+  #contact ul {
+    float: none;
+    margin-top: 1em;
+  }
+  #contact p {
+    float: none;
+  }
+  footer {
+    clear: both;
+  }
 }

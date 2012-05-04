@@ -19,9 +19,9 @@ $(document).ready(function() {
 				'<p>',
 					content,
 				'</p>',
-				'<span>',
+				'<!--span>',
 					'<a href="' + link + '" class="tweet-link">' + created_at + '</a>',
-				'</span>',
+				'</span-->',
 			'</li>'
 		].join('');
 
