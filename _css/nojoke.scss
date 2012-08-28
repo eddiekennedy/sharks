@@ -97,11 +97,15 @@ img{
   max-width:100%;
 }
 strong{
-  color:$accent-color;
+  xcolor:$accent-color;
 }
 
 .knockout {
   background: $accent-color;
+  color: #fff;
+}
+.section.knockout {
+  padding: 0;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
@@ -154,6 +158,13 @@ header {
   padding: .5em 0 0;
   border-bottom: 1px solid #ccc;
   @include cut;
+  .contact {
+    background: rgba( 0, 0, 0, .2);
+    p {
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
+  }
 }
 #content,
 hgroup,
@@ -202,12 +213,11 @@ h3 {
 */
 /* Icons */
 .icons {
-  margin-top: 1em;
   text-align: center;
   position: relative;
-  background: rgba(255, 255, 255, .8);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  background: rgba( 0, 0, 0, .1);
+  padding-top: .5em;
+  padding-bottom: .7em;
   li {
     display:inline-block;
   }

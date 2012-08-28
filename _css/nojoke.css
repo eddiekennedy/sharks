@@ -50,10 +50,14 @@ img {
   max-width: 100%; }
 
 strong {
-  color: #544861; }
+  xcolor: #544861; }
 
 .knockout {
-  background: #544861; }
+  background: #544861;
+  color: #fff; }
+
+.section.knockout {
+  padding: 0; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 * 2. $Type
@@ -106,6 +110,11 @@ header {
   border-bottom: 1px solid #ccc;
   border-bottom: 1px solid #dcdcdc;
   box-shadow: 0 1px 0 rgba(240, 240, 240, 0.8), 0 2px 0 rgba(240, 240, 240, 0.8), 0 3px 0 white; }
+  header .contact {
+    background: rgba(0, 0, 0, 0.2); }
+    header .contact p {
+      padding-top: .5em;
+      padding-bottom: .5em; }
 
 #content,
 hgroup,
@@ -156,12 +165,11 @@ h3 {
 */
 /* Icons */
 .icons {
-  margin-top: 1em;
   text-align: center;
   position: relative;
-  background: rgba(255, 255, 255, 0.8);
-  padding-top: 5px;
-  padding-bottom: 5px; }
+  background: rgba(0, 0, 0, 0.1);
+  padding-top: .5em;
+  padding-bottom: .7em; }
   .icons li {
     display: inline-block; }
   .icons a {
