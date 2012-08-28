@@ -1,20 +1,21 @@
+@import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 /*
 *   CSS built by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
 *
-* Table of Contents:
-*   Elements
-*   Type
-*   Layout
-*   Content
+*   Table of Contents:
+*   1. $Elements
+*   2. $Type
+*   3. $Layout
+*   4. $Content
+*   5. $Responsive
 *
-* *To-Do
+* * To-Do
 *   Encode Images
 */
-@import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
-@import url('http://fonts.googleapis.com/css?family=Droid+Sans');
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* $Elements
+* 1. $Elements
 */
 body,
 h3, h4,
@@ -52,7 +53,7 @@ strong {
   color: #544861; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* $Type
+* 2. $Type
 */
 body {
   font-size: 100%;
@@ -100,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* $Layout
+* 3. $Layout
 */
 header {
   padding: 2em 0;
@@ -154,7 +155,7 @@ h3 {
   position: relative; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* $Content
+* 4. $Content
 */
 /* Icons */
 .icons {
@@ -198,7 +199,7 @@ h3 {
     color: #ddd; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* We Responsive, Son!
+* 5. We $Responsive, Son!
 */
 @media screen and (min-width: 460px) {
   body {
