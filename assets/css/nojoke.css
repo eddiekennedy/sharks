@@ -119,6 +119,7 @@ footer p {
 
 footer {
   padding: 2em;
+  border-bottom: 5px solid #544861;
   font-size: .8em;
   font-family: "Droid Sans", verdana;
   color: #aaa;
@@ -143,13 +144,13 @@ footer {
     overflow: hidden;
     position: absolute;
     top: 100%;
-    font-size: .6em;
-    color: #eee;
-    text-shadow: 0 1px 0 #ddd; }
+    font-size: .8em;
+    color: #ddd;
+    text-shadow: 0 1px 0 #ccc; }
 
 .vertical li {
   margin: 0;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #ddd;
   margin-bottom: 1.6em;
   padding-bottom: 1.6em; }
   .vertical li:last-child {
@@ -168,28 +169,29 @@ footer {
   text-align: center;
   position: relative;
   background: rgba(0, 0, 0, 0.1);
-  padding-top: .5em;
-  padding-bottom: .7em; }
+  padding-top: .7em;
+  padding-bottom: .9em; }
   .icons li {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 2%; }
   .icons a {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     border: none;
     text-indent: -9999em;
     opacity: 0.8; }
     .icons a:hover {
-      opacity: 0.1;
+      opacity: 1;
       -webkit-transition: opacity 0.1s linear; }
   .icons a#github {
-    background: url(../images/icon-github.png) no-repeat; }
+    background: url(../images/icon-github.png); }
   .icons a#twitter {
-    background: url(../images/icon-twitter.png) no-repeat; }
+    background: url(../images/icon-twitter.png); }
   .icons a#tumblr {
-    background: url(../images/icon-tumblr.png) no-repeat; }
+    background: url(../images/icon-tumblr.png); }
   .icons a#linkedin {
-    background: url(../images/icon-linkedin.png) no-repeat; }
+    background: url(../images/icon-linkedin.png); }
   .icons:before {
     content: '\00D7\00A0\00D7\00A0\00D7\00A0';
     position: absolute;
