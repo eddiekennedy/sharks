@@ -5,10 +5,10 @@
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
 *
 *   Table of Contents:
-*   1. $Elements
-*   2. $Type
-*   3. $Layout
-*   4. $Content
+*   1. $Element Styles
+*   2. $Section Styles / Layout
+*   3. $Content Styles / layout
+*   4. $Icons
 *   5. $Responsive
 *
 * * To-Do
@@ -17,25 +17,46 @@
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 * 1. $Elements
 */
-body,
-h3, h4,
-p, ul, li, img, a {
-  /* Zero 'em */
+/* Resets */
+body, h1, h2, h3, h4, p, ul, li, img, a {
   margin: 0;
   padding: 0; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* Body Styles */
 body {
   background: #fcfcfc;
-  border-top: 4px solid #544861; }
+  border-top: 4px solid #544861;
+  font-size: 100%;
+  font-family: "Droid Sans", verdana;
+  color: #333; }
 
-p {
-  xmargin-bottom: 1.5em; }
+/* Element Styles */
+h1, h2, h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  xline-height: 1.7em; }
+
+h3, h4 {
+  color: #544861; }
+
+h3 {
+  font-family: "Droid Serif", georgia;
+  font-size: 1.4em;
+  text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white; }
+
+h4 {
+  font-size: 1em; }
 
 ul {
   list-style: none; }
 
 a {
-  xborder-bottom: 1px dashed #389e98; }
+  color: #389e98;
+  text-decoration: none; }
   a:hover {
     border-bottom: none;
     background: #544861;
@@ -49,84 +70,29 @@ img {
   width: 100%;
   max-width: 100%; }
 
-strong {
-  xcolor: #544861; }
-
-.knockout {
-  background: #544861;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9); }
-
-.section.knockout {
-  padding: 0; }
-
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* 2. $Type
-*/
-body {
-  font-size: 100%;
-  font-family: "Droid Serif", georgia;
-  color: #333; }
-
-h1, h2, h3 {
-  font-size: 1.2em;
-  font-weight: normal;
-  line-height: 1.7em; }
-
-h3, h4 {
-  color: #544861; }
-
-h3 {
-  text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white; }
-
-h4 {
-  font-size: 1em; }
-
-#contact h3 {
-  font-size: 1em; }
-
-a {
-  color: #389e98;
-  text-decoration: none; }
-
-footer {
-  font-size: .8em;
-  font-family: "Droid Sans", verdana;
-  color: #aaa;
-  text-align: center; }
-
-.section li {
-  font-family: "Droid Sans", verdana;
-  font-size: 0.8em; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* 3. $Layout
+* 2. $Section Styles + Layout
 */
 header {
-  padding: .5em 0 0;
+  xpadding: .5em 0 0;
   border-bottom: 1px solid #ccc;
+  font-family: "Droid Serif", georgia;
   border-bottom: 1px solid #dcdcdc;
   box-shadow: 0 1px 0 rgba(240, 240, 240, 0.8), 0 2px 0 rgba(240, 240, 240, 0.8), 0 3px 0 white; }
   header .contact {
     background: rgba(0, 0, 0, 0.2); }
     header .contact p {
-      padding-top: .5em;
-      padding-bottom: .5em; }
+      xpadding-top: .5em;
+      xpadding-bottom: .5em; }
 
 #content,
 hgroup,
+.contact p,
 footer p {
   width: 94%;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto; }
-
-footer p {
-  padding: 1em 0; }
 
 #content {
   padding: 15px 0; }
@@ -135,10 +101,30 @@ footer p {
   float: none;
   width: 100%;
   clear: both;
-  padding: 1em 0 1.4em;
-  margin: 0 0 2em 0;
+  xpadding: 1em 0 1.4em;
+  xmargin: 0 0 2em 0; }
+
+footer {
+  padding: 1.5em 0 3em;
+  border-top: 1px solid red;
+  font-size: .8em;
+  font-family: "Droid Sans", verdana;
+  color: #aaa;
+  text-align: center; }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+* 3. $Content Styles
+*/
+/* Knockout styles */
+.knockout {
+  background: #544861;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9); }
+
+/* Chomper border */
+.border {
   position: relative; }
-  .section:after {
+  .border:after {
     content: '\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
     width: 100%;
     display: block;
@@ -152,24 +138,20 @@ footer p {
 .vertical li {
   margin: 0;
   border-bottom: 1px dashed #ccc;
-  margin-bottom: 2em;
-  padding-bottom: 2em; }
+  xmargin-bottom: 2em;
+  xpadding-bottom: 2em; }
   .vertical li:last-child {
     border-bottom: 0; }
 
-/* Relatively Positioned Elements */
-h3 {
-  position: relative; }
-
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* Icons
+* Icons <ul>
 */
 .icons {
   text-align: center;
   position: relative;
   background: rgba(0, 0, 0, 0.1);
-  padding-top: .5em;
-  padding-bottom: .7em; }
+  xpadding-top: .5em;
+  xpadding-bottom: .7em; }
   .icons li {
     display: inline-block; }
   .icons a {
