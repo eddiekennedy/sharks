@@ -183,13 +183,13 @@ h3 {
       opacity: 0.8;
       -webkit-transition: opacity 0.1s linear; }
   .icons a#github {
-    background: url(../_images/icon-github.png) no-repeat; }
+    background: url(../images/icon-github.png) no-repeat; }
   .icons a#twitter {
-    background: url(../_images/icon-twitter.png) no-repeat; }
+    background: url(../images/icon-twitter.png) no-repeat; }
   .icons a#tumblr {
-    background: url(../_images/icon-tumblr.png) no-repeat; }
+    background: url(../images/icon-tumblr.png) no-repeat; }
   .icons a#linkedin {
-    background: url(../_images/icon-linkedin.png) no-repeat; }
+    background: url(../images/icon-linkedin.png) no-repeat; }
   .icons:before {
     content: '\00D7\00A0\00D7\00A0\00D7\00A0';
     position: absolute;

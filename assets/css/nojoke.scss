@@ -20,6 +20,7 @@ $droid-serif: 'Droid Serif', georgia;
 $droid-sans: 'Droid Sans', verdana;
 $link-color: #389E98;
 $accent-color: #544861;
+$image-path: '../images/';
 
 @mixin wrap {
   width:94%;
@@ -234,16 +235,16 @@ h3 {
     }
   }
   a#github{
-    background:url(../_images/icon-github.png) no-repeat;
+    background:url(../images/icon-github.png) no-repeat;
   }
   a#twitter{
-    background:url(../_images/icon-twitter.png) no-repeat;
+    background:url(../images/icon-twitter.png) no-repeat;
   }
   a#tumblr{
-    background:url(../_images/icon-tumblr.png) no-repeat;
+    background:url(../images/icon-tumblr.png) no-repeat;
   }
   a#linkedin{
-    background:url(../_images/icon-linkedin.png) no-repeat;
+    background:url(../images/icon-linkedin.png) no-repeat;
   }
   &:before{
     content:'\00D7\00A0\00D7\00A0\00D7\00A0';
