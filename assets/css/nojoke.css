@@ -44,12 +44,13 @@ h3, h4 {
   color: #544861; }
 
 h3 {
+  margin-bottom: 1.4em;
   font-family: "Droid Serif", georgia;
-  font-size: 1.4em;
-  text-shadow: -1px 1px 0 #dddddd, -2px 2px 0 white, -3px 3px 0 white; }
+  font-size: 1.4em; }
 
 h4 {
-  font-size: 1em; }
+  font-size: 1em;
+  margin-bottom: .4em; }
 
 ul {
   list-style: none; }
@@ -95,18 +96,19 @@ footer p {
   margin-right: auto; }
 
 #content {
-  padding: 15px 0; }
+  xpadding: 15px 0;
+  line-height: 1.4em; }
 
 .section {
   float: none;
   width: 100%;
   clear: both;
-  xpadding: 1em 0 1.4em;
-  xmargin: 0 0 2em 0; }
+  padding: 1.6em 0 1.6em;
+  xbackground: rgba(255, 0, 100, 0.2);
+  margin: 0 0 2em 0; }
 
 footer {
-  padding: 1.5em 0 3em;
-  border-top: 1px solid red;
+  padding: 2em;
   font-size: .8em;
   font-family: "Droid Sans", verdana;
   color: #aaa;
@@ -138,10 +140,16 @@ footer {
 .vertical li {
   margin: 0;
   border-bottom: 1px dashed #ccc;
-  xmargin-bottom: 2em;
-  xpadding-bottom: 2em; }
+  margin-bottom: 1.6em;
+  padding-bottom: 1.6em; }
   .vertical li:last-child {
     border-bottom: 0; }
+
+.serif {
+  font-family: "Droid Serif", georgia; }
+
+.description {
+  margin-bottom: .6em; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 * Icons <ul>
