@@ -54,7 +54,7 @@ strong {
 
 .knockout {
   background: #544861;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9); }
 
 .section.knockout {
@@ -162,9 +162,8 @@ h3 {
   position: relative; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
-* 4. $Content
+* Icons
 */
-/* Icons */
 .icons {
   text-align: center;
   position: relative;
@@ -219,8 +218,8 @@ h3 {
     float: left; } }
 @media screen and (min-width: 700px) {
   header h1, header h2 {
-    font-size: 1.15em;
-    line-height: 1.7em; }
+    xfont-size: 1.15em;
+    xline-height: 1.7em; }
 
   .col-b {
     float: right;
