@@ -74,18 +74,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   background: #fcfcfc;
   border-top: 4px solid $accent-color;
-  font-size:100%;
-  font-family:$droid-sans;
-  color:#333;
+  font-size: 100%;
+  font-family: $droid-sans;
+  color: #333;
 }
 
 /* Element Styles */
-h1, h2, h3 {
-  font-size:1.2em;
-  font-weight:normal;
-  xline-height:1.7em;
+h1, h2 {
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.8em;
+  xtext-shadow: 0 2px 0 rgba( 0, 0, 0, 1);
+}
+h1 {
+  margin-bottom: .6em;
 }
 h3, h4 {
+  font-size: 1.2em;
+  font-weight: normal;
   color: $accent-color;
 }
 h3 {
@@ -123,7 +129,6 @@ img{
 * 2. $Section Styles + Layout
 */
 header {
-  xpadding: .5em 0 0;
   border-bottom: 1px solid #ccc;
   font-family: $droid-serif;
   @include cut;
@@ -135,6 +140,12 @@ header {
     }
   }
 }
+hgroup {
+  padding: .8em 0 1.4em;
+}
+.contact p {
+  padding: 1em 0;
+}
 #content,
 hgroup,
 .contact p,
@@ -142,7 +153,6 @@ footer p {
   @include wrap;
 }
 #content {
-  xpadding: 15px 0;
   line-height: 1.4em;
 }
 .section {
@@ -205,21 +215,21 @@ footer {
   text-align: center;
   position: relative;
   background: rgba( 0, 0, 0, .1);
-  xpadding-top: .5em;
-  xpadding-bottom: .7em;
+  padding-top: .5em;
+  padding-bottom: .7em;
   li {
-    display:inline-block;
+    display: inline-block;
   }
   a {
-    display:block;
-    width:24px;
-    height:24px;
-    border:none;
-    text-indent:-9999em;
-    opacity:0.5;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: none;
+    text-indent: -9999em;
+    opacity: 0.8;
     &:hover{
-      opacity:0.8;
-      -webkit-transition:opacity 0.1s linear;
+      opacity: 0.1;
+      -webkit-transition: opacity 0.1s linear;
     }
   }
   a#github{
