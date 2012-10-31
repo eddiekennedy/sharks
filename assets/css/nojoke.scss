@@ -21,6 +21,9 @@ $droid-sans: 'Droid Sans', verdana;
 $link-color: #389E98;
 $accent-color: #544861;
 $image-path: '../images/';
+$dark-blue: #282a41;
+$darkest-blue: #1b1d2d;
+$dark-purple: #3b3345;
 
 @mixin wrap {
   width:94%;
@@ -73,7 +76,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Body Styles */
 body {
   background: #fcfcfc;
-  border-top: 4px solid $accent-color;
+  border-top: 4px solid $darkest-blue;
   font-size: 100%;
   font-family: $droid-sans;
   color: #333;
@@ -98,10 +101,11 @@ h3 {
   margin-bottom: 1.4em;
   font-family: $droid-serif;
   font-size: 1.4em;
+  @include cross;
 }
 h4 {
-  font-size: 1em;
-  margin-bottom: .4em;
+  font-size: 1.2em;
+  margin-bottom: .5em;
 }
 ul {
   list-style:none;
@@ -135,16 +139,13 @@ header {
   .contact {
     background: rgba( 0, 0, 0, .2);
     p {
-      xpadding-top: .5em;
-      xpadding-bottom: .5em;
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
   }
 }
 hgroup {
   padding: .8em 0 1.4em;
-}
-.contact p {
-  padding: 1em 0;
 }
 #content,
 hgroup,
@@ -158,7 +159,6 @@ footer p {
 .section {
   @include col;
   padding: 1.6em 0 1.6em;
-  xbackground: rgba(255,0,100,.2);
   margin: 0 0 2em 0;
 }
 footer {
@@ -175,7 +175,7 @@ footer {
 */
 /* Knockout styles */
 .knockout {
-  background: $accent-color;
+  background: $dark-blue;
   color: rgba( 255, 255, 255, 0.95);
   text-shadow: 0 1px 0 rgba( 0, 0, 0, 0.9);
 }
@@ -203,11 +203,22 @@ footer {
     border-bottom: 0;
   }
 }
+.vertical.tight li {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
 .serif {
   font-family: $droid-serif;
 }
 .description {
   margin-bottom: .6em;
+}
+.date{
+  font-size: .8em;
+  color: #aaa;
+}
+.date a {
+  color: #999;
 }
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 * Icons <ul>
@@ -267,7 +278,7 @@ footer {
 */
 @media screen and (min-width: 460px) {
   body {
-    background:url(../_images/wht.jpg);
+    background:url(../images/wht.jpg);
   }
   #contact ul {
     float: right;
@@ -299,5 +310,9 @@ footer {
   }
   footer {
     clear: both;
+  }
+  /* Twitter Widget F*ckery */
+  #twitter-widget-0 {
+    background: red;
   }
 }

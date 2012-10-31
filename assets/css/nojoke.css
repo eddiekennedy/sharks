@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* Body Styles */
 body {
   background: #fcfcfc;
-  border-top: 4px solid #544861;
+  border-top: 4px solid #1b1d2d;
   font-size: 100%;
   font-family: "Droid Sans", verdana;
   color: #333; }
@@ -53,10 +53,15 @@ h3 {
   margin-bottom: 1.4em;
   font-family: "Droid Serif", georgia;
   font-size: 1.4em; }
+  h3:before {
+    content: '\00D7\00A0';
+    position: absolute;
+    right: 100%;
+    text-shadow: none; }
 
 h4 {
-  font-size: 1em;
-  margin-bottom: .4em; }
+  font-size: 1.2em;
+  margin-bottom: .5em; }
 
 ul {
   list-style: none; }
@@ -88,14 +93,11 @@ header {
   header .contact {
     background: rgba(0, 0, 0, 0.2); }
     header .contact p {
-      xpadding-top: .5em;
-      xpadding-bottom: .5em; }
+      padding-top: 1em;
+      padding-bottom: 1em; }
 
 hgroup {
   padding: .8em 0 1.4em; }
-
-.contact p {
-  padding: 1em 0; }
 
 #content,
 hgroup,
@@ -114,7 +116,6 @@ footer p {
   width: 100%;
   clear: both;
   padding: 1.6em 0 1.6em;
-  xbackground: rgba(255, 0, 100, 0.2);
   margin: 0 0 2em 0; }
 
 footer {
@@ -130,7 +131,7 @@ footer {
 */
 /* Knockout styles */
 .knockout {
-  background: #544861;
+  background: #282a41;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.9); }
 
@@ -156,11 +157,22 @@ footer {
   .vertical li:last-child {
     border-bottom: 0; }
 
+.vertical.tight li {
+  margin-bottom: 1em;
+  padding-bottom: 1em; }
+
 .serif {
   font-family: "Droid Serif", georgia; }
 
 .description {
   margin-bottom: .6em; }
+
+.date {
+  font-size: .8em;
+  color: #aaa; }
+
+.date a {
+  color: #999; }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 * Icons <ul>
@@ -210,7 +222,7 @@ footer {
 */
 @media screen and (min-width: 460px) {
   body {
-    background: url(../_images/wht.jpg); }
+    background: url(../images/wht.jpg); }
 
   #contact ul {
     float: right;
@@ -245,4 +257,8 @@ footer {
     float: none; }
 
   footer {
-    clear: both; } }
+    clear: both; }
+
+  /* Twitter Widget F*ckery */
+  #twitter-widget-0 {
+    background: red; } }
