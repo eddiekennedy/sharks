@@ -165,6 +165,12 @@ h1 {
   color: $accent-color;
   text-transform: uppercase;
   @include cross;
+  text-shadow:
+  -1px 1px 0 #e1e2ed,
+  -2px 2px 0 #e1e2ed,
+  -3px 3px 0 #e1e2ed,
+  -4px 4px 0 #e1e2ed,
+  -5px 5px 0 #e1e2ed;
 }
 /* Project List */
 .project-name {
@@ -385,6 +391,14 @@ footer {
   }
   footer {
     font-size: 1em;
+    p {
+      display: inline;
+      &:first-child {
+        border-right: 1px solid #aaa;
+        margin-right: .5%;
+        padding-right: .5%;
+      }
+    }
   }
 }
 @media screen and (min-width: 1000px) {

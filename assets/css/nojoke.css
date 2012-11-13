@@ -121,7 +121,8 @@ h1 {
   margin-bottom: 1.4em;
   font-size: 1.4em;
   color: #353856;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: -1px 1px 0 #e1e2ed, -2px 2px 0 #e1e2ed, -3px 3px 0 #e1e2ed, -4px 4px 0 #e1e2ed, -5px 5px 0 #e1e2ed; }
   .section-heading:before {
     content: '\00D7\00A0';
     position: absolute;
@@ -330,7 +331,13 @@ footer {
       text-indent: -9999em; }
 
   footer {
-    font-size: 1em; } }
+    font-size: 1em; }
+    footer p {
+      display: inline; }
+      footer p:first-child {
+        border-right: 1px solid #aaa;
+        margin-right: .5%;
+        padding-right: .5%; } }
 @media screen and (min-width: 1000px) {
   .content {
     xfont-size: 1.2em;
