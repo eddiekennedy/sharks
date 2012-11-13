@@ -107,7 +107,18 @@ h1 {
   margin: 0;
   border-bottom: 1px dashed #ddd;
   margin-bottom: 1.6em;
-  padding-bottom: 1.6em; }
+  padding-bottom: 1.6em;
+  position: relative; }
+  .vertical > li:after {
+    content: '✳';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.3em;
+    color: #ddd;
+    text-align: center;
+    background: yellow;
+    line-height: 0; }
 
 .vertical.tight li {
   margin-bottom: 1em;
