@@ -194,7 +194,7 @@ footer {
   padding: 1.2em 0;
   position: relative;
   display: inline-block;
-  background: #282a41;
+  background: url(../images/banner-bg.png) #282a41;
   border: 1px solid #151621;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 0 #151621;
