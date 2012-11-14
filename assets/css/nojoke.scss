@@ -11,7 +11,7 @@ $droid-serif: 'Droid Serif', georgia;
 $droid-sans: 'Droid Sans', verdana;
 $dark-blue: #282a41;
 $link-color: #389E98;
-$link-color-highlight: #2b7874;
+$link-color-highlight: #225f5c;
 $accent-color: #353856;
 $image-path: '../images/';
 
@@ -225,7 +225,7 @@ h1 {
 }
 /* Footer */
 footer {
-  border-bottom: 10px solid $link-color;
+  border-bottom: 5px solid $link-color;
   font-size: .9em;
   font-family: $droid-sans;
   text-align: center;
