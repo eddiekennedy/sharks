@@ -28,30 +28,27 @@ $image-path: '../images/';
 }
 @mixin cross {
   &:before {
-    content: '\00D7\00A0';
-    position: absolute;
-    right: 100%;
-    text-shadow: none;
+//    content: '\00D7\00A0';
+//    position: absolute;
+//    right: 100%;
+//    text-shadow: none;
   }
 }
 @mixin col-a {
   float: left;
   width: percentage(600/960);
   padding-right: percentage(60/960);
-  padding-left: 0;
   clear: left;
 }
 @mixin col-b {
   float: right;
   width: percentage(300/960);
-  padding-right: 0;
-  padding-left: 0;
   clear: right;
 }
 @mixin col {
-  float: none;
-  width: 100%;
-  clear: both;
+//  float: none;
+//  width: 100%;
+//  clear: both;
 }
 
 /* Resets */
@@ -59,6 +56,10 @@ body, h1, h2, h3, h4, p, ul, li, img, a { margin:0; padding:0; }
 ul { list-style: none; }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
 
 /* j.mp/bestclearfix /
 .section:after {
@@ -75,7 +76,7 @@ body {
   background: #fcfcfc;
   border-top: 5px solid $link-color;
   box-shadow: inset 0 2px 0 $link-color-highlight;
-  font-size: 100%;
+  font-size: 0.9em;
   font-family: $droid-sans;
   color: #444;
 }
@@ -104,10 +105,6 @@ img{
 /* 
 ***   Page Layout Styles 
 */
-header {
-  @include col;
-  padding: 1.6em 0 0;
-}
 hgroup,
 .content {
   @include wrap;
@@ -125,24 +122,13 @@ footer {
 /* 
 ***   Header 
 */
-h1 {
-  font-family: $droid-serif;
-  font-size: 1em;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
 
 /* 
 ***   Content 
 */
 .content {
-  font-size: .9em;
-  line-height: 1.6em;
-}
-.about {
-  @include col;
+  //font-size: .9em;
+  //line-height: 1.6em;
 }
 .vertical > li {
   margin: 0;
@@ -150,17 +136,17 @@ h1 {
   margin-bottom: 1.6em;
   padding-bottom: 1.6em;
   position: relative;
-  &:after {
-    content: '✳';
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    font-size: 1.3em;
-    color: #ddd;
-    text-align: center;
-    background: yellow;
-    line-height: 0;
-  }
+//  &:after {
+//    content: '✳';
+//    width: 100%;
+//    position: absolute;
+//    bottom: 0;
+//    font-size: 1.3em;
+//    color: #ddd;
+//    text-align: center;
+//    background: yellow;
+//    line-height: 0;
+//  }
 }
 .vertical.tight li {
   margin-bottom: 1em;
@@ -170,24 +156,21 @@ h1 {
     border-bottom: 0;
   }
 }
+.see-more {
+  clear: both;
+}
 /* Section Headings */
 .section-heading {
   margin-bottom: 1.4em;
-  font-size: 1.4em;
+  //font-size: 0.8em;
+  font-weight: bold;
   color: $accent-color;
   text-transform: uppercase;
-  @include cross;
-  text-shadow:
-  -1px 1px 0 #e1e2ed,
-  -2px 2px 0 #e1e2ed,
-  -3px 3px 0 #e1e2ed,
-  -4px 4px 0 #e1e2ed,
-  -5px 5px 0 #e1e2ed;
 }
 /* Project List */
 .project-name {
   margin-bottom: .5em;
-  font-size: 1.2em;
+  //font-size: 1.2em;
   font-weight: normal;
   color: $accent-color;
 }
@@ -199,8 +182,8 @@ h1 {
   margin-right: 2%;
   padding-right: 2%;
   border-right: 1px solid #ddd;
-  text-transform: uppercase;
-  font-size: .9em;
+  //text-transform: uppercase;
+  //font-size: .9em;
   &:last-child {
     padding-right: 0;
     margin-right: 0;
@@ -210,18 +193,6 @@ h1 {
 .visit {
   padding-right: 2%;
   width: auto;
-}
-/* Twitter Feed */
-.date{
-  display: block;
-  font-size: .8em;
-  color: #aaa;
-}
-.date a {
-  color: #999;
-  &:hover {
-    color: #fff;
-  }
 }
 /* Footer */
 footer {
@@ -236,17 +207,6 @@ footer {
 /*
 ***   Decorative Classes
 */
-.banner {
-  width: 100%;
-  padding: 1.2em 0 1.2em;
-  position: relative;
-  display: inline-block;
-  background: url(../images/banner-bg.png) $dark-blue;
-  border: 1px solid #151621;
-  color: rgba( 255, 255, 255, 0.95);
-  text-shadow: 0 2px 0 #151621;
-  text-align: center;
-}
 .border {
   position: relative;
   &:after {
@@ -264,10 +224,6 @@ footer {
 }
 .serif {
   font-family: $droid-serif;
-}
-/* Sorry */
-.clr {
-  clear: both;
 }
 
 /*
@@ -301,17 +257,8 @@ footer {
   a#twitter {
     background: url(../images/icon-twitter.png) no-repeat;
   }
-  a#instagram {
-    background: url(../images/icon-instagram.png) no-repeat;
-  }
-  a#tumblr {
-    background: url(../images/icon-tumblr.png) no-repeat;
-  }
   a#linkedin {
     background: url(../images/icon-linkedin.png) no-repeat;
-  }
-  a#rdio {
-    background: url(../images/icon-rdio.png) no-repeat;
   }
   /*
   &:before{
@@ -337,72 +284,36 @@ footer {
 
 @media screen and (min-width: 400px) {
   body {
-    background: url(../images/wht.jpg);
+    //background: url(../images/wht.jpg);
   }
   .content {
     font-size: 1em;
     line-height: 1.6em;
   }
-  .banner {
-    width: auto;
-    padding: 1em 2%;
-    &:before {
-      content:'\00D7\00A0\00A0';
-      text-shadow:none;
-      font-weight: normal;
-    }
-    &:after {
-      content:'\00A0\00A0\00D7';
-      text-shadow:none;
-      font-weight: normal;
-    }
-  }
   .icons {
-    xtext-align: right;
     a {
       text-indent: 9999em;
     }
   }
 }
-@media screen and (min-width: 700px) {
-  .content {
-    xfont-size: 1.1em;
-    xline-height: 1.8em;
-  }
+@media screen and (min-width: 500px) {
   .col-b{
     @include col-b;
   }
   .col-a{
     @include col-a;
   }
-  .banner {
-    width: auto;
-    font-size: 1.2em;
-  }
-  .about {
-    xtext-align: center;
-    font-size: 1.2em;
-    line-height: 1.8em;
-    p {
-      xdisplay: inline;
-    }
-  }
-  .left {
-    float: none;
-    width: 100%
-  }
-  .right {
-    float: none;
-    width: 100%;
-  }
-  .icons {
-    text-align: left;
-    a {
-      text-indent: -9999em;
+  .vertical {
+    li {
+      width: 50%;
+      float: left;
+      border-top: 1px solid #ddd;
+      border-bottom: none;
+      background: red;
     }
   }
   footer {
-    font-size: 1em;
+    //font-size: 1em;
     p {
       display: inline;
       &:first-child {
@@ -414,14 +325,4 @@ footer {
   }
 }
 @media screen and (min-width: 1000px) {
-  .content {
-    xfont-size: 1.2em;
-    xline-height: 1.8em;
-  }
-  .about {
-    padding-top: 2em;
-    text-align: center;
-    font-size: 1.3em;
-    line-height: 1.8em;
-  }
 }
