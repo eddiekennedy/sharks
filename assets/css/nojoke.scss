@@ -5,10 +5,18 @@
 
 @import url('http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,800,600');
+
+
+
+
+
+
+
 
 // Page Colors
-$droid-serif: 'Droid Serif', georgia;
-$droid-sans: 'Droid Sans', verdana;
+$serif: 'Open Sans', sans-serif;
+$sans: 'Open Sans', sans-serif;
 $dark-blue: #282a41;
 $link-color: #389E98;
 $link-color-highlight: #225f5c;
@@ -36,8 +44,8 @@ $image-path: '../images/';
 }
 @mixin col-a {
   float: left;
-  width: percentage(600/960);
-  padding-right: percentage(60/960);
+  width: percentage(630/960);
+  padding-right: percentage(30/960);
   clear: left;
 }
 @mixin col-b {
@@ -49,6 +57,16 @@ $image-path: '../images/';
 //  float: none;
 //  width: 100%;
 //  clear: both;
+}
+@mixin clearfix {
+//  zoom:1;
+//  &:before, &:after {
+//      content: "\0020"; 
+//      display: block; 
+//  }
+//  &:after {
+//      clear: both;
+//  }
 }
 
 /* Resets */
@@ -62,12 +80,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  }
 
 /* j.mp/bestclearfix /
-.section:after {
+header:after {
   clear: both; content: "\0020"; display: block; height: 0; visibility: hidden;
 }
-/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page /
-.section { zoom: 1; }
-*/
+
 
 /* 
 ***   Element Styles 
@@ -77,7 +93,7 @@ body {
   border-top: 5px solid $link-color;
   box-shadow: inset 0 2px 0 $link-color-highlight;
   font-size: 0.9em;
-  font-family: $droid-sans;
+  font-family: $sans;
   color: #444;
 }
 p {
@@ -105,12 +121,16 @@ img{
 /* 
 ***   Page Layout Styles 
 */
+header {
+  
+}
 hgroup,
 .content {
   @include wrap;
 }
 .section {
   @include col;
+  @include clearfix;
   padding: 1.6em 0 1.6em;
   margin: 0 0 2em 0;
 }
@@ -130,7 +150,8 @@ footer {
   //font-size: .9em;
   //line-height: 1.6em;
 }
-.vertical > li {
+.vertical {
+  > li {
   margin: 0;
   border-bottom: 1px dashed #ddd;
   margin-bottom: 1.6em;
@@ -147,6 +168,7 @@ footer {
 //    background: yellow;
 //    line-height: 0;
 //  }
+  }
 }
 .vertical.tight li {
   margin-bottom: 1em;
@@ -162,28 +184,21 @@ footer {
 /* Section Headings */
 .section-heading {
   margin-bottom: 1.4em;
-  //font-size: 0.8em;
-  font-weight: bold;
+  font-size: 1em;
+  font-weight: 800;
   color: $accent-color;
   text-transform: uppercase;
 }
 /* Project List */
 .project-name {
   margin-bottom: .5em;
-  //font-size: 1.2em;
-  font-weight: normal;
+  font-weight: 600;
   color: $accent-color;
-}
-.description {
-  xfont-family: $droid-serif;
 }
 .visit-list li {
   display: inline-block;
   margin-right: 2%;
   padding-right: 2%;
-  border-right: 1px solid #ddd;
-  //text-transform: uppercase;
-  //font-size: .9em;
   &:last-child {
     padding-right: 0;
     margin-right: 0;
@@ -198,7 +213,7 @@ footer {
 footer {
   border-bottom: 5px solid $link-color;
   font-size: .9em;
-  font-family: $droid-sans;
+  font-family: $sans;
   text-align: center;
   p {
     opacity: .5;
@@ -214,16 +229,13 @@ footer {
     width: 100%;
     display: block;
     overflow: hidden;
-    position: absolute;
-    top: 100%;
     font-size: .8em;
     color: rgba( 0, 0, 0, .15);
-    xtext-shadow: 0 -1px 0 rgba( 0, 0, 0, .5);
     clear: both;
   }
 }
 .serif {
-  font-family: $droid-serif;
+  font-family: $serif;
 }
 
 /*
@@ -304,12 +316,11 @@ footer {
     @include col-a;
   }
   .vertical {
-    li {
-      width: 50%;
-      float: left;
-      border-top: 1px solid #ddd;
+    > li {
+      //width: 50%;
+      //xfloat: left;
+      //border-top: 1px solid #ddd;
       border-bottom: none;
-      background: red;
     }
   }
   footer {
