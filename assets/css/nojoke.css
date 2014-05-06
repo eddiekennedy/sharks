@@ -1,11 +1,14 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic");
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,800,600");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,600");
+@import url("http://fonts.googleapis.com/css?family=PT+Mono");
+@import url("http://fonts.googleapis.com/css?family=Abril+Fatface");
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
 /*
 * * CSS by @eddiekennedy using SASS ( http://sass-lang.com ).
 *   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
 */
-/* Resets */
 body, h1, h2, h3, h4, p, ul, li, img, a {
   margin: 0;
   padding: 0; }
@@ -13,7 +16,6 @@ body, h1, h2, h3, h4, p, ul, li, img, a {
 ul {
   list-style: none; }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
@@ -22,122 +24,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* j.mp/bestclearfix /
-header:after {
-  clear: both; content: "\0020"; display: block; height: 0; visibility: hidden;
-}
+.heading, h1, h2, h3 {
+  font-weight: 300; }
 
-
-/* 
-***   Element Styles 
-*/
-body {
-  background: #fcfcfc;
-  border-top: 5px solid #389e98;
-  box-shadow: inset 0 2px 0 #225f5c;
-  font-size: 0.9em;
-  font-family: "Open Sans", sans-serif;
-  color: #444; }
-
-p {
-  margin-bottom: .6em; }
-
-a {
-  color: #389e98;
-  text-decoration: none; }
-  a:hover {
-    border-bottom: none;
-    background: #353856;
-    color: #fff; }
-  a:active {
-    outline: none;
-    position: relative;
-    top: 1px; }
-
-img {
-  width: 100%;
-  max-width: 100%; }
-
-/* 
-***   Page Layout Styles 
-*/
-hgroup,
-.content {
+.content, header section {
   width: 90%;
-  max-width: 1040px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto; }
 
-.section {
-  padding: 1.6em 0 1.6em;
-  margin: 0 0 2em 0; }
+.type-a {
+  float: left;
+  width: 65.625%;
+  padding-right: 3.125%;
+  clear: left; }
 
-footer {
-  clear: both;
-  padding: 3em 0 2em; }
+.type-b {
+  float: right;
+  width: 31.25%;
+  clear: right; }
 
-/* 
-***   Header 
-*/
-/* 
-***   Content 
-*/
-.vertical > li {
-  margin: 0;
-  border-bottom: 1px dashed #ddd;
-  margin-bottom: 1.6em;
-  padding-bottom: 1.6em;
-  position: relative; }
+.cut, ul.vertical > li {
+  border-bottom: 1px solid #eee; }
 
-.vertical.tight li {
-  margin-bottom: 1em;
-  padding-bottom: 1em; }
-  .vertical.tight li:last-child {
-    margin-bottom: 0;
-    border-bottom: 0; }
-
-.see-more {
-  clear: both; }
-
-/* Section Headings */
-.section-heading {
-  margin-bottom: 1.4em;
-  font-size: 1em;
-  font-weight: 800;
-  color: #353856;
-  text-transform: uppercase; }
-
-/* Project List */
-.project-name {
-  margin-bottom: .5em;
-  font-weight: 600;
-  color: #353856; }
-
-.visit-list li {
-  display: inline-block;
-  margin-right: 2%;
-  padding-right: 2%; }
-  .visit-list li:last-child {
-    padding-right: 0;
-    margin-right: 0;
-    border-right: none; }
-
-.visit {
-  padding-right: 2%;
-  width: auto; }
-
-/* Footer */
-footer {
-  border-bottom: 5px solid #389e98;
-  font-size: .9em;
-  font-family: "Open Sans", sans-serif;
+.asterisk:after, header section:after {
+  display: block;
+  content: '✳';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #eee;
+  line-height: 0;
   text-align: center; }
-  footer p {
-    opacity: .5; }
 
-/*
-***   Decorative Classes
-*/
 .border {
   position: relative; }
   .border:after {
@@ -146,84 +68,125 @@ footer {
     display: block;
     overflow: hidden;
     font-size: .8em;
-    color: rgba(0, 0, 0, 0.15);
+    color: #eee;
     clear: both; }
 
-.serif {
-  font-family: "Open Sans", sans-serif; }
-
-/*
-***   Icons
-*/
-.icons {
-  position: relative;
-  /*
-  &:before{
-    content:'\00D7\00A0\00D7\00A0\00D7\00A0';
-    position:absolute;
-    right:85%;
-    top:30%;
-    color:#ddd;
-  }
-  &:after{
-    content:'\00D7\00A0\00D7\00A0\00D7\00A0';
-    position:absolute;
-    left:85%;
-    top:30%;
-    color:#ddd;
-  }
-  */ }
-  .icons li {
-    display: inline-block;
-    margin-right: 4%;
-    margin-top: 1em; }
-    .icons li:last-child {
-      margin-right: 0; }
-  .icons a {
+.strike {
+  display: inline-block;
+  background: #fff; }
+  .strike:before {
     display: block;
-    width: 32px;
-    height: 32px;
-    border: none;
-    text-indent: -9999em;
+    width: 100%;
+    content: ' ';
+    font-weight: 300;
+    border-bottom: 3px double #ccc;
+    margin-top: -25px;
+    color: #ddd;
+    font-size: .6em;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -50; }
+
+.inline-wrapper {
+  display: table;
+  margin: 0 auto;
+  padding-top: 1em; }
+
+body {
+  background: #fcfcfc;
+  border-top: 5px solid #389e98;
+  box-shadow: inset 0 2px 0 #225f5c;
+  font-size: 1.2em;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #666; }
+
+header {
+  border-bottom: 1px solid #f6f6f6;
+  background: #fff;
+  position: relative; }
+
+footer {
+  border-bottom: 5px solid #389e98;
+  opacity: 0.8;
+  clear: both;
+  font-size: .8em; }
+  footer p {
+    margin-bottom: 0; }
+
+h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 1em; }
+
+h3 {
+  font-size: .8em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: .3em; }
+
+ul.inline li {
+  display: inline-block;
+  xmargin-right: 10px; }
+ul.vertical > li {
+  position: relative;
+  margin-bottom: 1.4em;
+  padding-bottom: 1em; }
+
+p {
+  line-height: 1.6em;
+  margin-bottom: .8em; }
+
+a {
+  color: #389e98;
+  text-decoration: none; }
+  a:hover {
+    border-bottom: none;
+    background: #353856;
+    color: #fff;
     opacity: 0.8; }
-    .icons a:hover {
-      opacity: 1;
-      -webkit-transition: opacity 0.1s linear; }
-  .icons a#github {
+  a:active {
+    outline: none;
+    position: relative;
+    top: 1px; }
+
+i {
+  font-size: 0.9em;
+  opacity: 0.8; }
+
+.mod {
+  position: relative;
+  padding: 1.5em 0;
+  margin-bottom: 0; }
+  .mod.center {
+    text-align: center; }
+
+.icons li {
+  background: #fff;
+  border-radius: 50%; }
+
+.icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: none;
+  text-indent: -9999em;
+  opacity: 0.8; }
+  .icon:hover {
+    opacity: 1;
+    -webkit-transition: opacity 0.1s linear; }
+  .icon.github {
     background: url(../images/icon-github.png) no-repeat; }
-  .icons a#twitter {
+  .icon.twitter {
     background: url(../images/icon-twitter.png) no-repeat; }
-  .icons a#linkedin {
+  .icon.linkedin {
+    background: url(../images/icon-linkedin.png) no-repeat; }
+  .icon.link {
     background: url(../images/icon-linkedin.png) no-repeat; }
 
 /*
 *** We Responsive, Son!
 */
-@media screen and (min-width: 400px) {
-  .content {
-    font-size: 1em;
-    line-height: 1.6em; }
-
-  .icons a {
-    text-indent: 9999em; } }
-@media screen and (min-width: 500px) {
-  .col-b {
-    float: right;
-    width: 31.25%;
-    clear: right; }
-
-  .col-a {
-    float: left;
-    width: 65.625%;
-    padding-right: 3.125%;
-    clear: left; }
-
-  .vertical > li {
-    border-bottom: none; }
-
-  footer p {
-    display: inline; }
-    footer p:first-child {
-      border-right: 1px solid #aaa;
-      margin-right: .5%;
-      padding-right: .5%; } }
