@@ -1,6 +1,6 @@
 /*
-* * CSS by @eddiekennedy using SASS ( http://sass-lang.com ).
-*   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
+*   CSS by @eddiekennedy | Generated with SASS
+*   Open Sans appears courtesy of: http://www.google.com/webfonts
 */
 
 // #fonts
@@ -37,13 +37,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: auto;
   margin-right: auto;
 }
-.type-a {
+@mixin type-a {
   float: left;
   width: percentage(630/960);
   padding-right: percentage(30/960);
   clear: left;
 }
-.type-b {
+@mixin type-b {
   float: right;
   width: percentage(300/960);
   clear: right;
@@ -128,7 +128,7 @@ header {
 
 // #footer
 footer {
-  border-bottom: 5px solid $link-color;
+  border-bottom: 50px solid $link-color;
   opacity: 0.8;
   clear: both;
   font-size: .8em;
@@ -216,6 +216,12 @@ i {
   }
 }
 
+.visit {
+  margin-right: 20px;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
 // #icons
 .icons {
   li {
@@ -249,11 +255,11 @@ i {
 }
 
 // #mediaqueries
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 748px) {
   .type-a {
-    @extend .type-a;
+    @include type-a;
   }
   .type-b {
-    @extend .type-b;
+    @include type-b;
   }
 }

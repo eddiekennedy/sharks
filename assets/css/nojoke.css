@@ -6,8 +6,8 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic);
 /*
-* * CSS by @eddiekennedy using SASS ( http://sass-lang.com ).
-*   Droid Serif & Droid Sans appear courtesy of: http://www.google.com/webfonts
+*   CSS by @eddiekennedy | Generated with SASS
+*   Open Sans appears courtesy of: http://www.google.com/webfonts
 */
 body, h1, h2, h3, h4, p, ul, li, img, a {
   margin: 0;
@@ -32,17 +32,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   max-width: 900px;
   margin-left: auto;
   margin-right: auto; }
-
-.type-a {
-  float: left;
-  width: 65.625%;
-  padding-right: 3.125%;
-  clear: left; }
-
-.type-b {
-  float: right;
-  width: 31.25%;
-  clear: right; }
 
 .cut, ul.vertical > li {
   border-bottom: 1px solid #eee; }
@@ -110,7 +99,7 @@ header {
   position: relative; }
 
 footer {
-  border-bottom: 5px solid #389e98;
+  border-bottom: 50px solid #389e98;
   opacity: 0.8;
   clear: both;
   font-size: .8em; }
@@ -164,6 +153,11 @@ i {
   .mod.center {
     text-align: center; }
 
+.visit {
+  margin-right: 20px;
+  font-size: 0.9em;
+  font-weight: 400; }
+
 .icons li {
   background: #fff;
   border-radius: 50%; }
@@ -186,3 +180,15 @@ i {
     background: url(../images/icon-linkedin.png) no-repeat; }
   .icon.link {
     background: url(../images/icon-linkedin.png) no-repeat; }
+
+@media screen and (min-width: 748px) {
+  .type-a {
+    float: left;
+    width: 65.625%;
+    padding-right: 3.125%;
+    clear: left; }
+
+  .type-b {
+    float: right;
+    width: 31.25%;
+    clear: right; } }
