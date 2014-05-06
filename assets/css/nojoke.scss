@@ -216,8 +216,6 @@ i {
   }
 }
 
-
-
 // #icons
 .icons {
   li {
@@ -250,109 +248,7 @@ i {
   }
 }
 
-///* 
-//***   Page Layout Styles 
-//*/
-
-//.content {
-//  @include wrap;
-//}
-//.section {
-//  @include col;
-//  @include clearfix;
-//  padding: 1.6em 0 1.6em;
-//  margin: 0 0 2em 0;
-//}
-//footer {
-//  clear: both;
-//  padding: 3em 0 2em; 
-//}
-
-///* 
-//***   Header 
-//*/
-
-///* 
-//***   Content 
-//*/
-//.content {
-//  //font-size: .9em;
-//  //line-height: 1.6em;
-//}
-//.vertical {
-//  > li {
-//  margin: 0;
-//  border-bottom: 1px dashed #ddd;
-//  margin-bottom: 1.6em;
-//  padding-bottom: 1.6em;
-//  position: relative;
-////  &:after {
-////    content: '✳';
-////    width: 100%;
-////    position: absolute;
-////    bottom: 0;
-////    font-size: 1.3em;
-////    color: #ddd;
-////    text-align: center;
-////    background: yellow;
-////    line-height: 0;
-////  }
-//  }
-//}
-//.vertical.tight li {
-//  margin-bottom: 1em;
-//  padding-bottom: 1em;
-//  &:last-child {
-//    margin-bottom: 0;
-//    border-bottom: 0;
-//  }
-//}
-//.see-more {
-//  clear: both;
-//}
-///* Section Headings */
-//.section-heading {
-//  margin-bottom: 1.4em;
-//  font-size: 1em;
-//  font-weight: 800;
-//  color: $accent-color;
-//  text-transform: uppercase;
-//}
-///* Project List */
-//.project-name {
-//  margin-bottom: .5em;
-//  font-weight: 600;
-//  color: $accent-color;
-//}
-//.visit-list li {
-//  display: inline-block;
-//  margin-right: 10px;
-//  font-size: .9em;
-//  &:last-child {
-//    padding-right: 0;
-//    margin-right: 0;
-//    border-right: none;
-//  }
-//}
-
-/*
-*** We Responsive, Son!
-*/
-
-//@media screen and (min-width: 400px) {
-//  body {
-//    //background: url(../images/wht.jpg);
-//  }
-//  .content {
-//    font-size: 1em;
-//    line-height: 1.6em;
-//  }
-//  .icons {
-//    a {
-//      text-indent: 9999em;
-//    }
-//  }
-//}
+// #mediaqueries
 @media screen and (min-width: 500px) {
   .type-a {
     @extend .type-a;
@@ -360,25 +256,4 @@ i {
   .type-b {
     @extend .type-b;
   }
-//  .vertical {
-//    > li {
-//      //width: 50%;
-//      //xfloat: left;
-//      //border-top: 1px solid #ddd;
-//      border-bottom: none;
-//    }
-//  }
-//  footer {
-//    //font-size: 1em;
-//    p {
-//      display: inline;
-//      &:first-child {
-//        border-right: 1px solid #aaa;
-//        margin-right: .5%;
-//        padding-right: .5%;
-//      }
-//    }
-//  }
 }
-//@media screen and (min-width: 1000px) {
-//}
