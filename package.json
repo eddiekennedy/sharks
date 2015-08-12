@@ -1,0 +1,21 @@
+{
+  "name": "sharks",
+  "version": "0.0.0",
+  "description": "The source code for sharksarenojoke.com",
+  "author": "Eddie Kennedy <eddiekennedy@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddiekennedy/sharks"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-inline-source": "^1.3.0",
+    "gulp-jshint": "^1.11.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-server-livereload": "^1.4.0",
+    "gulp-sprite-generator": "^0.2.3",
+    "gulp-uglify": "^1.2.0"
+  }
+}

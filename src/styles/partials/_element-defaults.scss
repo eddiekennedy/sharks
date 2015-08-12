@@ -1,0 +1,55 @@
+// #body
+body {
+  font-size: 1.2em;
+  font-weight: 300;
+  font-family: $sans;
+  color: #666;
+
+  @extend .borders;
+
+  background: $link-color;
+  background: $accent-color;
+
+}
+
+// #main
+main {
+  //margin-top: 4em;
+  //padding: 3em 0 6em;
+  //border-top: 1px solid #f6f6f6;
+
+}
+
+// #footer
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 1em;
+  padding: 1em 0;
+  font-size: .8em;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+// #p
+p {
+  line-height: 1.6em;
+  //margin-bottom: .8em;
+}
+
+// #a
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    border-bottom: none;
+    background: $accent-color;
+    color: #fff;
+    opacity: 0.8;
+  }
+  &:active {
+    outline: none; 
+    position: relative; 
+    top: 1px;
+  }
+}

@@ -1,0 +1,66 @@
+/*
+*   CSS by @eddiekennedy | Generated with SASS
+*   Open Sans appears courtesy of: http://www.google.com/webfonts
+*/
+
+// #fonts
+@import 'partials/fonts';
+
+// #variables
+@import 'partials/variables';
+
+// #resets
+@import 'partials/reset';
+
+// #icons
+@import 'partials/icons';
+
+// #element-defaults
+@import 'partials/element-defaults';
+
+// #decoration
+@import 'partials/decoration';
+
+// #content
+.content {
+  // @extend .asterisk;
+  padding: 8em 0 0 0;
+  border-bottom: 2px solid #f6f6f6;
+  background: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.about {
+  font-size: 1em;
+  margin-bottom: 8em;
+  line-height: 1.6em;
+}
+
+.social {
+  padding: 1em 0;
+  background: #fcfcfc;
+}
+
+.email-link {
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  display: none;
+}
+
+
+@media screen and (min-width: 700px) {
+  // #about
+  .about {
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: 1.2em;
+  }
+}

@@ -1,117 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sharks Are No Joke</title>
-  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <link rel="stylesheet" href="assets/css/nojoke.css" />
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <style>@charset "UTF-8";@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,800");body,h1,h2,h3,h4,p,ul,li,img,a{margin:0;padding:0}ul{list-style:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.icon-list{display:inline;text-align:center;margin-right:-3%}.icon-list__item{display:inline-block;margin-right:3%;border-radius:50%}.icon{display:block;width:32px;height:32px;border:none;text-indent:-9999em;opacity:.8}.icon:hover{opacity:1;-webkit-transition:opacity .1s linear}.icon.github{background:url(/src/sprite/icon-github.png) no-repeat}.icon.twitter{background:url(/src/sprite/icon-twitter.png) no-repeat}.icon.linkedin{background:url(/src/sprite/icon-linkedin.png) no-repeat}body{font-size:1.2em;font-weight:300;font-family:"Open Sans",sans-serif;color:#666;background:#389E98;background:#353856}footer{width:100%;position:fixed;bottom:1em;padding:1em 0;font-size:.8em;color:rgba(255,255,255,.4);text-align:center}p{line-height:1.6em}a{color:#389E98;text-decoration:none}a:hover{border-bottom:none;background:#353856;color:#fff;opacity:.8}a:active{outline:none;position:relative;top:1px}.cut{border-bottom:1px solid #eee}.asterisk:after{display:block;content:'⟐ ⟐ ⟐';position:absolute;bottom:-1em;left:0;right:0;font-size:2em;font-weight:100;color:#3b3f61;line-height:0;text-align:center}.border{position:relative}.border:after{content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';width:100%;display:block;overflow:hidden;font-size:.8em;color:#eee;clear:both}.borders,body{position:relative}.borders:before,body:before{content:'\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC';top:0;color:#eee;z-index:100}.borders:before,body:before,.borders:after,body:after{width:100%;display:block;position:fixed;line-height:1;overflow:hidden;font-size:.8em}.borders:after,body:after{content:'\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';bottom:-2px;color:#282a41}.content{padding:8em 0 0;border-bottom:2px solid #f6f6f6;background:#fff;position:relative;text-align:center}.about{font-size:1em;margin-bottom:8em;line-height:1.6em}.social{padding:1em 0;background:#fcfcfc}.email-link{height:32px;display:inline-block;vertical-align:middle;display:none}@media screen and (min-width:700px){.about p{font-size:1.2em}}@media screen and (min-width:1200px){p{font-size:1.2em}}</style>
   <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <header class="mod">
-    <section>
-      <p>Sharks Are No Joke is the website of Eddie Kennedy, a web developer &amp; designer living in Somerville, MA.<p>
-      <p>I build websites and applications with a strong appreciation for well-written code and thoughtful design.</p>
-    </section>
-  </header>
-  <section class="content border">
-    <section class="mod type-b center">
-      <hgroup>
-        <h2>Get In Touch</h2>
-      </hgroup> 
-      <p><a href="mailto:eddiekennedy@gmail.com">eddiekennedy@gmail.com</a></p>
-      <div class="inline-wrapper">
-        <ul class="inline icons">
-          <li><a href="http://www.github.com/eddiekennedy" class="icon github" title="Github">Github</a></li>
-          <li><a href="http://www.twitter.com/eddiekennedy" class="icon twitter" title="Twitter">Twitter</a></li>
-          <li><a href="http://www.linkedin.com/in/eddiekennedy" class="icon linkedin" title="LinkeIn">LinkedIn</a></li>
-        </ul>
-      </div>
-    </section>
-    <section class="mod type-a">
-        <hgroup>
-          <h2>Recent Projects/Etc</h2>
-        </hgroup>
-        <ul class="vertical">
-          <li>
-            <h3 class="project-name">Grab Tracks</h3>
-            <p class="description">A Backbone.js app that uses the SoundCloud API to search for downloadable tracks.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.grabtracks.com" class="visit" title="Visit Site">Visit Site</a>
-              </li>
-              <li>
-                <a href="http://www.github.com/eddiekennedy/grab-tracks" class="visit" title="Visit Github Page">Visit Github Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="project-name">What Media Query? Bookmarklet</h3>
-            <p class="description">A javascript bookmarklet that can come in handy when wrangling media queries. The bookmarklet reports the current active media query along with browser dimensions.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.github.com/eddiekennedy/what-media-query-bookmarklet" class="visit">Visit Github Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="project-name">EdKennedy.org</h3>
-            <p class="description">Designed and developed a campaign website for Ed Kennedy, a current member of the Lowell City Council who also happens to be my father.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.edkennedy.org" class="visit">Visit Site</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="project-name">Tip-Top</h3>
-            <p class="description">A jQuery tool-tip plugin free of image dependencies.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.github.com/eddiekennedy/tip-top" class="visit">Visit Github Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <h3 class="project-name">FairbankAndPerry.com</h3>
-            <p class="description">Designed and developed a website for Fairbank &amp; Perry, a goldsmith shop in Concord, MA. Development included a custom Wordpress theme.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.fairbankandperry.com" class="visit">Visit Site</a>
-              </li>
-            </ul>
-          </li>
-          <li>  
-            <h3 class="project-name">The Bus is Coming In...</h3>
-            <p class="description">A self-serving exeprimental web application that reported when the bus was going to be at my stop.</p>
-            <ul class="inline">
-              <li>
-                <a href="http://www.github.com/eddiekennedy/the-bus-is-coming-in" class="visit">Visit Github Page</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p><i>If you would like to see more code samples, please <a href="mailto:eddiekennedy@gmail.com">get in touch</a>.</i></p>
-    </section>
-  </section><!-- / .content -->
+
+  <main class="content">
+
+    <div class="about">
+      <p>Sharks Are No Joke is the website of Eddie Kennedy, a web developer &amp; designer living in Somerville, MA.</p>
+      <a href="mailto:eddiekennedy@gmail.com" class="email-link">eddiekennedy@gmail.com</a>
+    </div>
+
+    <div class="social">
+
+      <ul class="icon-list">
+        <li class="icon-list__item">
+          <a href="http://www.github.com/eddiekennedy" class="icon github" title="Github">Github</a>
+        </li>
+        <li class="icon-list__item">
+          <a href="http://www.twitter.com/eddiekennedy" class="icon twitter" title="Twitter">Twitter</a>
+        </li>
+        <li class="icon-list__item">
+          <a href="http://www.linkedin.com/in/eddiekennedy" class="icon linkedin" title="LinkedIn">LinkedIn</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </main>
+
   <footer>
-    <section class="mod center">
-      <p>All Content &copy; Eddie Kennedy 2014</p>
-      <p><a href="https://github.com/eddiekennedy/sharks">View the source</a> on Github</p> 
-    </section>
+    <small class="wrap">All Content &copy; Eddie Kennedy 2015</small>
   </footer>
+
   <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-9154797-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+    // var _gaq = _gaq || [];
+    // _gaq.push(['_setAccount', 'UA-9154797-1']);
+    // _gaq.push(['_trackPageview']);
+    // (function() {
+    //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    // })();
   </script>
 </body>
 </html>
