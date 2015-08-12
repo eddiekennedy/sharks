@@ -1,3 +1,5 @@
 *.DS_Store
 *.sass-cache
 assets/php/twitter.php
+/dist
+/node_modules
