@@ -12,55 +12,111 @@
 // #resets
 @import 'partials/reset';
 
-// #icons
-@import 'partials/icons';
-
 // #element-defaults
 @import 'partials/element-defaults';
 
 // #decoration
 @import 'partials/decoration';
 
-// #content
 .content {
-  // @extend .asterisk;
-  padding: 8em 0 0 0;
+  @extend .asterisk;
+  padding: 3.5em 0 0 0;
   border-bottom: 2px solid #f6f6f6;
   background: #fff;
   position: relative;
-  text-align: center;
 }
 
 .about {
-  font-size: 1em;
-  margin-bottom: 8em;
-  line-height: 1.6em;
+  margin-bottom: 3.5em;
+  padding: 0 5%;
 }
 
-.social {
-  padding: 1em 0;
+.contact {
+  padding: 1em 5%;
   background: #fcfcfc;
+  border-top: 1px solid #f0f0f0;
+  font-size: .8em;
 }
 
 .email-link {
-  height: 32px;
+  margin-bottom: 1em;
   display: inline-block;
-  vertical-align: middle;
-  display: none;
 }
 
-
-@media screen and (min-width: 700px) {
-  // #about
-  .about {
-    p {
-      font-size: 1.2em;
+.social-list {
+  width: 100%;
+  padding-top: 1em;
+  border-top: 3px double #ddd;
+  &__item {
+    display: inline-block;
+    margin-right: 3%;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
-  p {
-    font-size: 1.2em;
+@media screen and (min-width: 500px) {
+  .contact {
+    &:after {
+       visibility: hidden;
+       display: block;
+       font-size: 0;
+       content: " ";
+       clear: both;
+       height: 0;
+    }
+  }
+  .email-link {
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: left;
+  }
+  .social-list {
+    width: 50%;
+    float: right;
+    padding-top: 0;
+    border-top: none;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .content {
+    padding-top: 4em;
+  }
+  
+  .about {
+    margin-bottom: 4em;
+    font-size: 1.4em;
+    p {
+      line-height: 1.8em;
+    }
+  }
+
+  .contact {
+    font-size: 1em;
+  }
+
+}
+
+
+@media screen and (min-width: 930px) {
+  .content {
+    padding-top: 8em;
+    text-align: center;
+    font-size: 1em;
+  }
+  .about {
+    margin-bottom: 8em;
+    padding: 0 3%;
+    text-align: center;
+    font-size: 2vw;
+  }
+  .contact {
+    padding-left: 3%;
+    padding-right: 3%;
   }
 }
