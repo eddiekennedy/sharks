@@ -1,24 +1,70 @@
 // #body
 body {
+  padding-top: 4em;
   font-size: 1.2em;
   font-weight: 300;
-  font-family: $sans;
+  font-family: $serif;
   color: #666;
 
-  @extend .borders;
+  // @extend .borders;
 
-  background: $link-color;
-  background: $accent-color;
+  // background: $link-color;
+  // background: $accent-color;
+
+}
+
+main {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 2em;
+  padding: 1em 0;
+  //border-top: 1px solid #ccc;
+  //border-bottom: 1px solid #ccc;
+
+  &:before {
+    content: '\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC';
+    width: 100%;
+    display: block;
+
+    position: absolute;
+    top: 0;
+
+    line-height: 1;
+
+    overflow: hidden;
+    font-size: .8em;
+    color: #eee;
+
+    z-index: 100;
+  }
+
+
+  &:after {
+    content: '\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2\25B2';
+    width: 100%;
+    display: block;
+
+    position: absolute;
+    bottom: -2px;
+
+    line-height: 1;
+
+    overflow: hidden;
+    font-size: .8em;
+    color: #eee;
+  }
+
+
 
 }
 
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 1em;
+  // position: fixed;
+  // bottom: 1em;
   padding: 1em 0;
   font-size: .8em;
-  color: rgba(255, 255, 255, 0.4);
+  // color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
@@ -29,12 +75,14 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
+
   &:hover {
     border-bottom: none;
     background: $accent-color;
     color: #fff;
     opacity: 0.8;
   }
+
   &:active {
     outline: none; 
     position: relative; 
