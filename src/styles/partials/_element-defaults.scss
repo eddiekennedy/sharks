@@ -5,21 +5,13 @@ body {
   font-weight: 300;
   font-family: $serif;
   color: #666;
-
-  // @extend .borders;
-
-  // background: $link-color;
-  // background: $accent-color;
-
 }
 
 main {
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 2em;
   padding: 1em 0;
-  //border-top: 1px solid #ccc;
-  //border-bottom: 1px solid #ccc;
 
   &:before {
     content: '\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC\25BC';
@@ -60,11 +52,8 @@ main {
 
 footer {
   width: 100%;
-  // position: fixed;
-  // bottom: 1em;
   padding: 1em 0;
   font-size: .8em;
-  // color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
@@ -89,3 +78,5 @@ a {
     top: 1px;
   }
 }
+
+// @media screen and (min-width: 1200px) {}
